@@ -9,7 +9,6 @@ const Background = () => {
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-      // Parallax effect should be included in core or slim
     }).then(() => {
       setInit(true);
     });
