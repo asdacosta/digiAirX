@@ -13,8 +13,3 @@
 .logo {
   position: relative;
 }
-
-svg.logoBg {
-  opacity: 0.3;
-  position: absolute;
-}
