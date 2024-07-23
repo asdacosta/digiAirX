@@ -5,6 +5,11 @@ import { Parallax } from "@tsparticles/engine";
 
 const Background = () => {
   const [init, setInit] = useState(false);
+  const [color, setColor] = useState({
+    light: "#ffffff",
+    black: "#000000",
+    fixed: "#0077b6",
+  });
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -21,7 +26,7 @@ const Background = () => {
   const options = useMemo(
     () => ({
       background: {
-        color: { value: "#000000" },
+        color: { value: color.light },
       },
       fpsLimit: 120,
       interactivity: {
@@ -74,12 +79,12 @@ const Background = () => {
           light: {
             area: {
               gradient: {
-                start: { value: "#ffffff" },
-                stop: { value: "#000000" },
+                start: { value: color.fixed },
+                stop: { value: color.light },
                 radius: 1000,
               },
             },
-            shadow: { color: { value: "#000000" }, length: 2000 },
+            shadow: { color: { value: color.light }, length: 2000 },
           },
         },
       },
@@ -94,10 +99,10 @@ const Background = () => {
           mode: "bounce",
           overlap: { enable: true, retries: 0 },
         },
-        color: { value: "#ffffff" },
+        color: { value: color.fixed },
         effect: { close: true, fill: true },
         links: {
-          color: "#ffffff",
+          color: color.fixed,
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -177,7 +182,7 @@ const Background = () => {
           speed: { angle: 50, move: 10 },
         },
         links: {
-          color: { value: "#ffffff" },
+          color: { value: color.fixed },
           distance: 150,
           enable: true,
           frequency: 1,
