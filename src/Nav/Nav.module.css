@@ -1,0 +1,20 @@
+.nav {
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  /* color: #e4e4e4; */
+}
+
+.nav svg {
+  width: 2rem;
+  fill: #023e8a;
+}
+
+.logo {
+  position: relative;
+}
+
+svg.logoBg {
+  opacity: 0.3;
+  position: absolute;
+}
