@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   position: fixed;
+  top: 1rem;
   z-index: 2;
   /* color: #e4e4e4; */
 }
