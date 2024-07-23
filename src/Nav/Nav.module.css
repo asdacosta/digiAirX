@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   padding: 0.5rem 2rem;
   width: 100%;
 }
@@ -36,7 +36,7 @@
 }
 
 .logoBox {
-  background-color: white;
+  background-color: rgb(206, 206, 223);
   border-radius: 1rem;
 }
 
@@ -47,7 +47,7 @@
   height: 1rem;
   right: -0.42rem;
   transform: rotate(60deg) translateY(0.8rem);
-  background-color: white;
+  background-color: rgb(206, 206, 223);
   z-index: 2;
 }
 
