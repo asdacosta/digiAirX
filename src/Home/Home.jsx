@@ -7,7 +7,7 @@ function Home() {
   const typeMainHeader = () => {
     const typed = new Typed(mainHeaderRef.current, {
       strings: [
-        `Dominate your competitors with <span class='${styles.animateHeader}' >professional</span>, <span class='${styles.animateHeader}'>modern</span>, and <span class='${styles.animateHeader}'>swift</span> digital services.`,
+        `Dominate your competitors with <br><span class='${styles.animateHeader}' >professional</span>, <span class='${styles.animateHeader}'>modern</span>, and <span class='${styles.animateHeader}'>swift</span> digital services.`,
       ],
       typeSpeed: 20,
       showCursor: false,
