@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
+import "./reset.css";
 import { Background } from "./Background";
+import { Nav } from "./Nav/Nav";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Background />
-      <h1>Ace Draco</h1>
+      <Nav />
     </>
   );
 }
