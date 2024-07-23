@@ -1,7 +1,19 @@
+import { useState } from "react";
 import styles from "./Nav.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 
 function Nav() {
+  const [lottie, setLottie] = useState(null);
+  const [theme, setTheme] = useState(true);
+  const [segment, setSegment] = useState([0, 30]);
+  const lottieRef = (lottie) => setLottie(lottie);
+  const play = () => {
+    if (!lottie) return;
+    lottie.play();
+    setTheme((prev) => !prev);
+    theme ? setSegment([0, 30]) : setSegment([30, 60]);
+  };
+
   return (
     <section className={styles.nav}>
       <button className={styles.logo}>
@@ -21,9 +33,11 @@ function Nav() {
         <button>Services</button>
         <button>Contact</button>
       </section>
-      <button>
+      <button onClick={play}>
         <Lot
-          autoplay
+          segment={segment}
+          speed={2}
+          dotLottieRefCallback={lottieRef}
           src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.lottie"
           style={{ width: "70px", height: "30px" }}
         ></Lot>
