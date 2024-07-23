@@ -1,0 +1,51 @@
+.home {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem;
+  z-index: 2;
+  background-color: #03055e31;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  text-align: left;
+}
+
+.animateHeader {
+  font-weight: 600;
+  color: transparent;
+  background: linear-gradient(90deg, #0077b6 40%, #03045e, #0077b6 60%);
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: animate-text 10s linear infinite reverse;
+  transition: color 0.3s ease-in-out;
+}
+
+@keyframes animate-text {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animateHeader:hover {
+  animation-play-state: paused;
+  color: #0077b6;
+}
+
+.infoBox {
+  font-size: 2rem;
+}
