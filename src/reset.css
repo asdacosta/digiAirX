@@ -144,6 +144,10 @@ input {
   overflow: visible;
 }
 
+button {
+  border: none;
+}
+
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
