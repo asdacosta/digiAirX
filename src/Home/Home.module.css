@@ -1,5 +1,6 @@
 .home {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   min-height: 100vh;
@@ -22,7 +23,7 @@
 .animateHeader {
   font-weight: 600;
   color: transparent;
-  background: linear-gradient(90deg, #0077b6 40%, #03045e, #0077b6 60%);
+  background: linear-gradient(90deg, #0077b6 35%, #03045e, #0077b6 65%);
   background-clip: text;
   background-size: 200% 200%;
   animation: animate-text 10s linear infinite reverse;
