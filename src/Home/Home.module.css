@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2rem;
 }
 
 .intro h1 {
@@ -48,6 +49,66 @@
 }
 
 .infoBox {
+  text-align: left;
   font-size: 2rem;
   user-select: none;
+}
+
+.illustrationBox {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 12rem;
+  padding: 0.2rem 1rem;
+  border-left: 0.2rem solid #0053a0;
+  border-right: 0.2rem solid #042d79;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.socials::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 1.2rem;
+  content: "Social Platforms";
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(150deg, #0077b6, #03045e);
+  transition: left 0.3s ease-in-out;
+}
+
+.socials:hover::before {
+  left: -100%;
+}
+
+.socials svg {
+  width: 2rem;
+  fill: #03045e;
+  cursor: pointer;
+  filter: blur(5rem);
+  transition: all 0.25s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.socials svg:hover {
+  fill: #0077b6;
+  scale: 1.1;
+}
+
+.socials:hover svg {
+  filter: blur(0);
 }
