@@ -4,15 +4,17 @@
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 3rem 2rem;
   z-index: 2;
   background-color: #03055e31;
 }
 
 .intro {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -46,6 +48,16 @@
 .animateHeader:hover {
   animation-play-state: paused;
   color: #0077b6;
+}
+
+.headerBox {
+  display: flex;
+  align-items: flex-end;
+}
+
+.headerBox,
+.infoBox {
+  height: 50%;
 }
 
 .infoBox {
