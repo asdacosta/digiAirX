@@ -86,7 +86,7 @@
   user-select: none;
 }
 
-.right button::after {
+.right button:not(:last-child):after {
   display: block;
   position: relative;
   content: "";
