@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
+import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 
 function Home() {
   const mainHeaderRef = useRef(null);
@@ -50,6 +51,14 @@ function Home() {
         <p className={styles.infoBox}>
           <span className={styles.info} ref={infoRef}></span>
         </p>
+      </section>
+      <section>
+        <Lot
+          autoplay
+          loop
+          src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/team.lottie"
+          style={{ width: "500px", height: "500px" }}
+        ></Lot>
       </section>
     </section>
   );
