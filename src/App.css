@@ -12,6 +12,7 @@
   min-height: 100vh;
   min-width: 100vw;
   z-index: 1;
+  letter-spacing: 0.05rem;
 }
 
 #tsparticles {
