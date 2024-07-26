@@ -4,13 +4,26 @@ import "./reset.css";
 import { Background } from "./Background";
 import { Nav } from "./Nav/Nav";
 import { Home } from "./Home/Home";
+import { About } from "./About/About";
+import { Load } from "./Load/Load";
 
 function App() {
+  const [stopLoad, setStopLoad] = useState(false);
+  const endLoadOnComplete = () => setStopLoad(true);
+
   return (
     <>
-      <Background />
-      <Nav />
-      <Home />
+      {!stopLoad ? (
+        <Load endOnComplete={endLoadOnComplete} />
+      ) : (
+        <>
+          <Background />
+          <Nav />
+          <Home />
+        </>
+      )}
+
+      {/* <About /> */}
     </>
   );
 }
