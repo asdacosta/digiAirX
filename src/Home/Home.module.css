@@ -22,11 +22,25 @@
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
+  width: 100%;
 }
 
-.intro h1 {
+h1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 4rem;
+  color: #0077b6;
+  height: 24%;
+}
+
+.intro h2 {
   font-size: 2.5rem;
   text-align: left;
+}
+
+.intro > * {
+  width: 100%;
 }
 
 .animateHeader {
@@ -59,17 +73,14 @@
 .headerBox {
   display: flex;
   align-items: flex-end;
-}
-
-.headerBox,
-.infoBox {
-  height: 50%;
+  height: 38%;
 }
 
 .infoBox {
   text-align: left;
   font-size: 1.7rem;
   user-select: none;
+  height: 38%;
 }
 
 .illustrationBox {
@@ -192,17 +203,17 @@
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   color: white;
-  background-color: #03045e;
+  background-color: #023e8a;
   cursor: pointer;
   transition: all 0.25s;
 }
 
 .actionButtons button:hover {
   background-color: rgb(206, 207, 224);
-  color: #03045e;
-  border: 0.15rem solid #03045e;
+  color: #023e8a;
+  border: 0.15rem solid #023e8a;
 }
 
 .actionButtons button:hover svg {
-  fill: #03045e;
+  fill: #023e8a;
 }
