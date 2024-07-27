@@ -147,6 +147,7 @@ input {
 button {
   border: none;
   letter-spacing: inherit;
+  cursor: pointer;
 }
 
 abbr[title] {
