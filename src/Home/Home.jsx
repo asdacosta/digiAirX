@@ -49,7 +49,7 @@ function Home() {
     <section className={styles.home}>
       <section className={styles.firstHome}>
         <section className={styles.intro}>
-          <h1>DigiAirX</h1>
+          <h1>DigiairX</h1>
           <p className={styles.headerBox}>
             <h2 ref={mainHeaderRef}></h2>
           </p>
