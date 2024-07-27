@@ -3,11 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 1.5rem;
   font-size: 0.9rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
   background-color: #023e8a;
   z-index: 2;
   color: white;
+  cursor: context-menu;
+  user-select: none;
 }
 
 .socials {
@@ -71,4 +74,48 @@
 .startButton:hover {
   background: none;
   background-color: #03045e;
+}
+
+.allLinks {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.allLinks button {
+  font-size: 0.9rem;
+  color: white;
+  background-color: transparent;
+  padding: 0;
+}
+
+.allLinks h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.quickLinks,
+.support {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.copyrightBox {
+  text-align: left;
+  align-self: center;
+  transform: translateX(-17.6rem);
+  position: relative;
+}
+
+.copyrightBox::before {
+  content: "";
+  height: 0.15rem;
+  width: 150%;
+  background-color: #03045e;
+  border-radius: 1rem;
+  position: absolute;
+  top: -0.5rem;
 }
