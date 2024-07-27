@@ -49,8 +49,9 @@ function Home() {
     <section className={styles.home}>
       <section className={styles.firstHome}>
         <section className={styles.intro}>
+          <h1>DigiAirX</h1>
           <p className={styles.headerBox}>
-            <h1 ref={mainHeaderRef}></h1>
+            <h2 ref={mainHeaderRef}></h2>
           </p>
           <p className={styles.infoBox}>
             <span className={styles.info} ref={infoRef}></span>
@@ -92,7 +93,7 @@ function Home() {
           <h2>Get to Know Us</h2>
           <section className={styles.homeCards}>
             <p>
-              At DigiAirX, we are devoted to helping businesses achieve success
+              At Digiairx, we are devoted to helping businesses achieve success
               in the digital world. Our experienced team of experts delivers the
               best digital services meticulously tailored to meet your specific
               needs.
