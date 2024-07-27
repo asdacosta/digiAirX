@@ -1,0 +1,68 @@
+.footer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  padding: 2rem 1rem;
+  background-color: #023e8a;
+  z-index: 2;
+  color: white;
+}
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socials svg {
+  fill: white;
+  width: 1.2rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info h3 {
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.toAction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.startButton {
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  background: linear-gradient(150deg, #03045e 40%, #0077b6);
+  box-shadow: 0.15rem 0.15rem 0.3rem black;
+  background-size: 200% 200%;
+  animation: melange 5s alternate infinite;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes melange {
+  from {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0% 50%;
+  }
+}
+
+.startButton:hover {
+  background: none;
+  background-color: #0077b6;
+}
