@@ -44,10 +44,10 @@
   border-radius: 0.5rem;
   color: white;
   background: linear-gradient(150deg, #03045e 40%, #0077b6);
-  box-shadow: 0.15rem 0.15rem 0.3rem black;
+  box-shadow: 0rem 0rem 0.3rem black;
   background-size: 200% 200%;
   animation: melange 5s alternate infinite;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 @keyframes melange {
@@ -64,5 +64,5 @@
 
 .startButton:hover {
   background: none;
-  background-color: #0077b6;
+  background-color: #03045e;
 }
