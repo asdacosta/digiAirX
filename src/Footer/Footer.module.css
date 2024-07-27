@@ -16,8 +16,14 @@
 }
 
 .socials svg {
-  fill: white;
+  fill: rgb(0, 0, 0);
   width: 1.2rem;
+  cursor: pointer;
+  transition: fill 0.3s ease-in-out;
+}
+
+.socials svg:hover {
+  fill: white;
 }
 
 .info {
