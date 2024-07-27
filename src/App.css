@@ -2,6 +2,10 @@
   border: 0.2rem solid teal;
 } */
 
+body {
+  overflow-x: hidden;
+}
+
 #root {
   display: flex;
   flex-direction: column;
