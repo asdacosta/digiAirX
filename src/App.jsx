@@ -6,6 +6,7 @@ import { Nav } from "./Nav/Nav";
 import { Home } from "./Home/Home";
 import { About } from "./About/About";
 import { Load } from "./Load/Load";
+import { Footer } from "./Footer/Footer";
 
 function App() {
   const [stopLoad, setStopLoad] = useState(false);
@@ -20,6 +21,7 @@ function App() {
           <Background />
           <Nav />
           <Home />
+          <Footer />
         </>
       )}
 
