@@ -35,6 +35,12 @@
   gap: 0.5rem;
 }
 
+.info img {
+  width: 2rem;
+  transform: translateY(0.1rem);
+  border-radius: 1rem;
+}
+
 .info h3 {
   font-size: 1.3rem;
   text-align: left;
