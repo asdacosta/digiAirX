@@ -22,42 +22,38 @@
   align-items: center;
   font-style: italic;
   position: relative;
-  border-radius: 1rem;
-  box-shadow: inset 0.5rem 0.5rem 1rem #90e0ef;
+  border-radius: 2rem;
   scale: 1.5;
+  border-left: 0.2rem solid black;
   transition: all 0.25s ease-in-out;
 }
 
-.logo:hover {
-  box-shadow: inset 0.5rem 0.5rem 1rem #48cae4;
-}
-
-.logo:hover .x {
-  opacity: 0.7;
-}
-
 .logoBox {
+  width: 3.3rem;
+  padding: 0.5rem 0;
   background-color: rgb(206, 206, 223);
   border-radius: 1rem;
 }
 
-.logo::after {
-  content: "";
+.slides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
   position: absolute;
-  width: 0.5rem;
-  height: 1rem;
-  right: -0.42rem;
-  transform: rotate(60deg) translateY(0.8rem);
-  background-color: rgb(206, 206, 223);
-  z-index: 2;
+  left: 0.5rem;
+  top: 0.1rem;
+  width: 100%;
+  height: 110%;
+  transform: translateY(-0.2rem);
+  z-index: 3;
 }
 
-.ir {
-  font-size: 1.2rem;
-  font-weight: 100;
-  color: #0077b6;
-  align-self: flex-end;
-  z-index: 3;
+.slides span {
+  width: 100%;
+  height: 0.12rem;
+  background-color: rgb(206, 206, 223);
+  /* background-color: red; */
 }
 
 .x {
@@ -65,16 +61,23 @@
   font-weight: 600;
   color: black;
   position: absolute;
-  right: -0.6rem;
-  opacity: 0.5;
+  right: -0.22rem;
   transition: opacity 0.25s ease-in-out;
   z-index: 2;
 }
 
+.x::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(206, 206, 223);
+  transform: rotate(9deg) translateX(-0.03rem);
+}
+
 .nav svg {
-  width: 1.5rem;
+  width: 1.45rem;
   fill: #0077b6;
-  opacity: 0.88;
   z-index: 3;
 }
 
