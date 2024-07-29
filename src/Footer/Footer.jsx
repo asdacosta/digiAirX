@@ -1,11 +1,15 @@
 import styles from "./Footer.module.css";
+import logo from "../assets/logo-blue.png";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <section className={styles.allLinks}>
         <section className={styles.info}>
-          <h3>DIGIAIRX</h3>
+          <h3>
+            <img src={logo} alt="Digiairx logo" />
+            DIGIAIRX
+          </h3>
           <section className={styles.toAction}>
             <p>
               Professional digital services delivered by an experienced team of
