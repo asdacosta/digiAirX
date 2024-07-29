@@ -7,6 +7,7 @@ import { Home } from "./Home/Home";
 import { About } from "./About/About";
 import { Load } from "./Load/Load";
 import { Footer } from "./Footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [stopLoad, setStopLoad] = useState(false);
@@ -20,7 +21,7 @@ function App() {
         <>
           <Background />
           <Nav />
-          <Home />
+          <Outlet />
           <Footer />
         </>
       )}
