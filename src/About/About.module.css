@@ -1,0 +1,85 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+  z-index: 2;
+  background-color: #03055e31;
+  text-align: justify;
+  cursor: context-menu;
+  user-select: none;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0077b6;
+  text-align: center;
+}
+
+.about > section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 50rem;
+}
+
+.about > section {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: square;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  height: 4rem;
+}
+
+.actionButtons svg {
+  width: 1.5rem;
+  fill: white;
+  transition: fill 0.25s;
+}
+
+.actionButtons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  height: fit-content;
+  width: 13rem;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #023e8a;
+  box-shadow: 0.1rem 0.1rem 0.3rem #03045e;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.actionButtons button:hover {
+  background-color: rgb(206, 207, 224);
+  color: #023e8a;
+  border: 0.15rem solid #023e8a;
+}
+
+.actionButtons button:hover svg {
+  fill: #023e8a;
+}
