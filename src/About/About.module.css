@@ -77,7 +77,7 @@
 .actionButtons button:hover {
   background-color: rgb(206, 207, 224);
   color: #023e8a;
-  border: 0.15rem solid #023e8a;
+  border: 0.1rem solid #023e8a;
 }
 
 .actionButtons button:hover svg {
