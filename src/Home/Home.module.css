@@ -25,6 +25,12 @@
   width: 100%;
 }
 
+.intro img {
+  width: 6rem;
+  transform: translateY(-0.5rem);
+  border-radius: 1rem;
+}
+
 h1 {
   display: flex;
   align-items: flex-end;
