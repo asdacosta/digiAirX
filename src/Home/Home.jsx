@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
+import logo from "../assets/logo.png";
 
 function Home() {
   const mainHeaderRef = useRef(null);
@@ -49,7 +50,10 @@ function Home() {
     <section className={styles.home}>
       <section className={styles.firstHome}>
         <section className={styles.intro}>
-          <h1>DigiairX</h1>
+          <h1>
+            <img src={logo} alt="Digiairx logo" />
+            DigiairX
+          </h1>
           <p className={styles.headerBox}>
             <h2 ref={mainHeaderRef}></h2>
           </p>
