@@ -31,6 +31,7 @@ function Services() {
             <Lot
               autoplay
               loop
+              speed={0.7}
               ref={websiteLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/website.json"
               style={{ width: "20rem", height: "20rem" }}
@@ -43,6 +44,7 @@ function Services() {
             <Lot
               autoplay
               loop
+              speed={0.7}
               ref={webappLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/webapp.json"
               style={{ width: "20rem", height: "20rem" }}
@@ -55,6 +57,7 @@ function Services() {
             <Lot
               autoplay
               loop
+              speed={0.7}
               ref={uiLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/uiux.json"
               style={{ width: "20rem", height: "20rem" }}
@@ -67,6 +70,7 @@ function Services() {
             <Lot
               autoplay
               loop
+              speed={0.7}
               ref={seoLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/seo.json"
               style={{ width: "20rem", height: "20rem" }}
@@ -79,6 +83,7 @@ function Services() {
             <Lot
               autoplay
               loop
+              speed={0.7}
               ref={marketingLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/marketing.json"
               style={{ width: "20rem", height: "20rem" }}
@@ -91,6 +96,7 @@ function Services() {
             <Lot
               autoplay
               loop
+              speed={0.7}
               ref={graphicLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/design.json"
               style={{ width: "20rem", height: "20rem" }}
@@ -103,6 +109,7 @@ function Services() {
             <Lot
               autoplay
               loop
+              speed={0.7}
               ref={brandLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/branding.json"
               style={{ width: "20rem", height: "20rem" }}
