@@ -1,16 +1,7 @@
-import { useRef } from "react";
 import styles from "./Services.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 
 function Services() {
-  const websiteLottieRef = useRef(null);
-  const webappLottieRef = useRef(null);
-  const uiLottieRef = useRef(null);
-  const seoLottieRef = useRef(null);
-  const marketingLottieRef = useRef(null);
-  const graphicLottieRef = useRef(null);
-  const brandLottieRef = useRef(null);
-
   return (
     <section className={styles.services}>
       <section className={styles.intro}>
@@ -32,7 +23,6 @@ function Services() {
               autoplay
               loop
               speed={0.7}
-              ref={websiteLottieRef}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/website.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -44,8 +34,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.7}
-              ref={webappLottieRef}
+              speed={0.9}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/webapp.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -57,8 +46,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.7}
-              ref={uiLottieRef}
+              speed={0.9}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/uiux.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -70,8 +58,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.7}
-              ref={seoLottieRef}
+              speed={0.9}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/seo.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -83,8 +70,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.7}
-              ref={marketingLottieRef}
+              speed={0.9}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/marketing.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -96,8 +82,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.7}
-              ref={graphicLottieRef}
+              speed={0.9}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/design.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -109,8 +94,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.7}
-              ref={brandLottieRef}
+              speed={0.9}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/branding.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
