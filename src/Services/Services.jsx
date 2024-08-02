@@ -34,7 +34,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.9}
+              speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/webapp.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -46,7 +46,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.9}
+              speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/uiux.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -58,7 +58,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.9}
+              speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/seo.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -70,7 +70,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.9}
+              speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/marketing.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -82,7 +82,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.9}
+              speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/design.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
@@ -94,7 +94,7 @@ function Services() {
             <Lot
               autoplay
               loop
-              speed={0.9}
+              speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/branding.json"
               style={{ width: "20rem", height: "20rem" }}
             ></Lot>
