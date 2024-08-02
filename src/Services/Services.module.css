@@ -72,6 +72,58 @@
   gap: 1rem;
 }
 
+.floated {
+  display: block;
+  position: relative;
+}
+
+.floated::before {
+  display: block;
+  content: "";
+  position: relative;
+  width: 12.3rem;
+  height: 3rem;
+  float: right;
+  margin: 0 0 0.2rem 0.5rem;
+}
+
+.uiBox .floated::before {
+  width: 13.3rem;
+}
+
+.marketingBox .floated::before {
+  width: 16.3rem;
+}
+
+.designBox .floated::before {
+  width: 14rem;
+}
+
+.brandingBox .floated::before {
+  width: 15.8rem;
+}
+
+.suiteBox .floated::before {
+  width: 12.8rem;
+}
+
+.floated button {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  position: absolute;
+  right: 0;
+  top: 0.2rem;
+}
+
+.floated svg {
+  width: 1.3rem;
+}
+
 .descriptions h2 {
   font-size: 2rem;
   font-weight: 600;
