@@ -1,0 +1,32 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+  z-index: 2;
+  background-color: #03055e31;
+  text-align: justify;
+  cursor: context-menu;
+  user-select: none;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0077b6;
+}
+
+.contact svg {
+  width: 1.8rem;
+  fill: #0077b6;
+  animation: rotateGlobe 5s linear infinite;
+}
+
+@keyframes rotateGlobe {
+  to {
+    transform: rotateY(360deg);
+  }
+}
