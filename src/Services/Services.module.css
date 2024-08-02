@@ -118,10 +118,26 @@
   position: absolute;
   right: 0;
   top: 0.2rem;
+  color: white;
+  background-color: #023e8a;
+  box-shadow: 0.1rem 0.1rem 0.3rem #03045e;
+  transition: all 0.25s;
 }
 
-.floated svg {
-  width: 1.3rem;
+.floated button:hover {
+  background-color: rgb(206, 207, 224);
+  color: #023e8a;
+  border: 0.1rem solid #023e8a;
+}
+
+.floated button svg {
+  width: 1.4rem;
+  fill: white;
+  transition: fill 0.25s;
+}
+
+.floated button:hover svg {
+  fill: #023e8a;
 }
 
 .descriptions h2 {
