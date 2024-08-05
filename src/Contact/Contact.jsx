@@ -12,7 +12,47 @@ function Contact() {
           RLDWIDE REMOTE SERVICES
         </h2>
       </section>
-      <section></section>
+      <section>
+        <form action="">
+          <div>
+            <label htmlFor="name">Full Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div>
+            <label htmlFor="email">Email Address</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div>
+            <label htmlFor="tel">Phone Number</label>
+            <input type="tel" name="tel" id="tel" />
+          </div>
+          <div>
+            <label htmlFor="company">Company Name</label>
+            <input type="text" name="company" id="company" />
+          </div>
+          <div>
+            <label htmlFor="country">Country</label>
+            <input type="text" name="country" id="country" />
+          </div>
+          <div>
+            <label htmlFor="industry">Industry</label>
+            <input type="text" name="industry" id="industry" />
+          </div>
+          <div>
+            <label htmlFor="service">Service</label>
+            <input type="text" name="service" id="service" />
+          </div>
+          <div>
+            <label htmlFor="us">How Did you hear About Us?</label>
+            <input type="text" name="us" id="us" />
+          </div>
+          <div>
+            <label htmlFor="message">Additional Message</label>
+            <input type="text" name="message" id="message" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </section>
   );
 }
