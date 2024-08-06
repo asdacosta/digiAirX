@@ -27,8 +27,8 @@ function Contact() {
             <input type="tel" name="tel" id="tel" />
           </div>
           <div>
-            <label htmlFor="company">Company Name</label>
-            <input type="text" name="company" id="company" />
+            <label htmlFor="bus">Business Name</label>
+            <input type="text" name="bus" id="bus" />
           </div>
           <div>
             <label htmlFor="country">Country</label>
