@@ -13,7 +13,7 @@ function Contact() {
         </h2>
       </section>
       <section>
-        <form action="">
+        <form className={styles.fields}>
           <section className={styles.firstFields}>
             <div>
               <label htmlFor="name">Full Name</label>
