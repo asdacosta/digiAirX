@@ -30,3 +30,45 @@
     transform: rotateY(360deg);
   }
 }
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.firstFields,
+.secFields {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.firstFields > div,
+.secFields > div,
+.lastFields > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.fields label {
+  align-self: flex-start;
+}
+
+.firstFields > div:first-child,
+.secFields > div:first-child {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+.firstFields > div:nth-child(2),
+.secFields > div:nth-child(2) {
+  grid-row: 2 / -1;
+  grid-column: 1 / 2;
+}
+
+.firstFields > div:last-child,
+.secFields > div:last-child {
+  grid-row: 2 / -1;
+  grid-column: 2 / 3;
+}
