@@ -37,6 +37,11 @@
   gap: 2rem;
 }
 
+.fields input {
+  height: 1.7rem;
+  border-radius: 0.5rem;
+}
+
 .firstFields,
 .secFields {
   display: grid;
@@ -49,6 +54,8 @@
 .lastFields > div {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  width: 20rem;
 }
 
 .fields label {
@@ -59,6 +66,7 @@
 .secFields > div:first-child {
   grid-row: 1 / 2;
   grid-column: 1 / -1;
+  width: 80%;
 }
 
 .firstFields > div:nth-child(2),
