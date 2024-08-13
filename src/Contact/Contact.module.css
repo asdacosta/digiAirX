@@ -66,11 +66,20 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 
-.fields label,
-.thirdFields h3 {
+.fields label {
   align-self: flex-start;
+}
+
+.firstFields label,
+.secFields label,
+.lastFields label {
+  position: relative;
+  left: 0.5rem;
+  bottom: -1.95rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .firstFields > div:first-child,
@@ -125,7 +134,7 @@
 }
 
 .lastFields textarea {
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   resize: none;
   padding: 0.3rem;
 }
