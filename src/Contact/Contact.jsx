@@ -1,6 +1,11 @@
+import { useState } from "react";
 import styles from "./Contact.module.css";
 
 function Contact() {
+  const [focusedInput, setFocusedInput] = useState("");
+  const triggerFocus = (event) => setFocusedInput(event.target.id);
+  const triggerBlur = () => setFocusedInput("");
+
   return (
     <section className={styles.contact}>
       <section>
@@ -13,33 +18,73 @@ function Contact() {
         </h2>
       </section>
       <section className={styles.fieldsBox}>
-        <form className={styles.fields}>
+        <form
+          className={`${styles.fields} ${
+            focusedInput ? styles[focusedInput] : ""
+          }`}
+        >
           <section className={styles.firstFields}>
-            <div>
+            <div className={styles.nameBox}>
               <label htmlFor="name">Full Name</label>
-              <input type="text" name="name" id="name" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+              />
             </div>
-            <div>
+            <div className={styles.emailBox}>
               <label htmlFor="email">Email Address</label>
-              <input type="email" name="email" id="email" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+              />
             </div>
-            <div>
+            <div className={styles.telBox}>
               <label htmlFor="tel">Phone Number</label>
-              <input type="tel" name="tel" id="tel" />
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+              />
             </div>
           </section>
           <section className={styles.secFields}>
-            <div>
+            <div className={styles.busBox}>
               <label htmlFor="bus">Business Name</label>
-              <input type="text" name="bus" id="bus" />
+              <input
+                type="text"
+                name="bus"
+                id="bus"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+              />
             </div>
-            <div>
+            <div className={styles.countryBox}>
               <label htmlFor="country">Country</label>
-              <input type="text" name="country" id="country" />
+              <input
+                type="text"
+                name="country"
+                id="country"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+              />
             </div>
-            <div>
+            <div className={styles.industryBox}>
               <label htmlFor="industry">Industry</label>
-              <input type="text" name="industry" id="industry" />
+              <input
+                type="text"
+                name="industry"
+                id="industry"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+              />
             </div>
           </section>
           <section className={styles.thirdFields}>
@@ -76,11 +121,17 @@ function Contact() {
             </section>
           </section>
           <section className={styles.lastFields}>
-            <div>
+            <div className={styles.usBox}>
               <label htmlFor="us">How Did you hear About Us?</label>
-              <input type="text" name="us" id="us" />
+              <input
+                type="text"
+                name="us"
+                id="us"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+              />
             </div>
-            <div>
+            <div className={styles.messageBox}>
               <label htmlFor="message">Additional Message</label>
               <textarea
                 name="message"
@@ -88,6 +139,8 @@ function Contact() {
                 cols="20"
                 rows="10"
                 maxLength="3000"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
               />
             </div>
           </section>
