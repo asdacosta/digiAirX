@@ -12,7 +12,7 @@ function Contact() {
           RLDWIDE REMOTE SERVICES
         </h2>
       </section>
-      <section>
+      <section className={styles.fieldsBox}>
         <form className={styles.fields}>
           <section className={styles.firstFields}>
             <div>
@@ -42,18 +42,53 @@ function Contact() {
               <input type="text" name="industry" id="industry" />
             </div>
           </section>
+          <section className={styles.thirdFields}>
+            <h3>Service</h3>
+            <section className={styles.services}>
+              <div>
+                <input type="checkbox" name="website" id="website" />
+                <label htmlFor="website">Website</label>
+              </div>
+              <div>
+                <input type="checkbox" name="ui" id="ui" />
+                <label htmlFor="ui">UI/UX Design</label>
+              </div>
+              <div>
+                <input type="checkbox" name="seo" id="seo" />
+                <label htmlFor="seo">SEO</label>
+              </div>
+              <div>
+                <input type="checkbox" name="marketing" id="marketing" />
+                <label htmlFor="marketing">Marketing</label>
+              </div>
+              <div>
+                <input type="checkbox" name="graphic" id="graphic" />
+                <label htmlFor="graphic">Graphic Design</label>
+              </div>
+              <div>
+                <input type="checkbox" name="brand" id="brand" />
+                <label htmlFor="brand">Brand Design</label>
+              </div>
+              <div>
+                <input type="checkbox" name="suite" id="suite" />
+                <label htmlFor="suite">Suite</label>
+              </div>
+            </section>
+          </section>
           <section className={styles.lastFields}>
-            <div>
-              <label htmlFor="service">Service</label>
-              <input type="text" name="service" id="service" />
-            </div>
             <div>
               <label htmlFor="us">How Did you hear About Us?</label>
               <input type="text" name="us" id="us" />
             </div>
             <div>
               <label htmlFor="message">Additional Message</label>
-              <input type="text" name="message" id="message" />
+              <textarea
+                name="message"
+                id="message"
+                cols="20"
+                rows="10"
+                maxLength="3000"
+              />
             </div>
           </section>
           <button type="submit">Submit</button>
