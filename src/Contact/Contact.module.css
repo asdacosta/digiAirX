@@ -211,7 +211,8 @@
 .fields.country .countryBox > label,
 .fields.industry .industryBox > label,
 .fields.us .usBox > label,
-.fields.message .messageBox > label {
+.fields.message .messageBox > label,
+.thirdFields h3 {
   bottom: 0;
   color: #023e8a;
 }
@@ -223,6 +224,13 @@
 .fields.country .countryBox::before,
 .fields.industry .industryBox::before,
 .fields.us .usBox::before,
-.fields.message .messageBox::before {
+.fields.message .messageBox::before,
+.fields.website .thirdFields::before,
+.fields.ui .thirdFields::before,
+.fields.seo .thirdFields::before,
+.fields.marketing .thirdFields::before,
+.fields.graphic .thirdFields::before,
+.fields.brand .thirdFields::before,
+.fields.suite .thirdFields::before {
   color: transparent;
 }
