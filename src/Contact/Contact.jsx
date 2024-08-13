@@ -159,7 +159,7 @@ function Contact() {
           </section>
           <section className={styles.lastFields}>
             <div className={styles.usBox}>
-              <label htmlFor="us">How Did you hear About Us?</label>
+              <label htmlFor="us">How did you hear about us?</label>
               <input
                 type="text"
                 name="us"
