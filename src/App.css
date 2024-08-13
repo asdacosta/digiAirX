@@ -30,6 +30,8 @@ body {
   font-size: 2rem;
 }
 
-button {
+button,
+input,
+textarea {
   font-family: "Montserrat", sans-serif;
 }
