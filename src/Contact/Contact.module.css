@@ -44,7 +44,6 @@
   height: 1.8rem;
   border-radius: 0.5rem;
   padding: 0 0.3rem;
-  font-size: 0.9rem;
 }
 
 .firstFields,
@@ -79,6 +78,7 @@
   color: #023e8a;
   top: 0.5rem;
   left: 0.5rem;
+  transition: color 0.2s ease-in-out;
 }
 
 .thirdFields::before {
@@ -110,6 +110,7 @@
   left: 0.5rem;
   bottom: -2rem;
   color: rgba(0, 0, 0, 0.7);
+  transition: bottom 0.3s ease-in-out;
 }
 
 .firstFields > div:first-child,
@@ -177,6 +178,7 @@
   border: none;
   outline: none;
   cursor: context-menu;
+  font-size: 0.9rem;
 }
 
 .firstFields input:focus,
@@ -184,9 +186,12 @@
 .lastFields input:focus,
 .lastFields textarea:focus {
   cursor: text;
-  outline: 0.13rem solid #0077b6;
 }
 
+.firstFields input:focus,
+.secFields input:focus,
+.lastFields input:focus,
+.lastFields textarea:focus,
 .firstFields input:active,
 .secFields input:active,
 .lastFields input:active,
@@ -196,4 +201,27 @@
 .lastFields input:hover,
 .lastFields textarea:hover {
   outline: 0.13rem solid #0077b6;
+}
+
+.fields.name .nameBox > label,
+.fields.email .emailBox > label,
+.fields.tel .telBox > label,
+.fields.bus .busBox > label,
+.fields.country .countryBox > label,
+.fields.industry .industryBox > label,
+.fields.us .usBox > label,
+.fields.message .messageBox > label {
+  bottom: 0;
+  color: #023e8a;
+}
+
+.fields.name .nameBox::before,
+.fields.email .emailBox::before,
+.fields.tel .telBox::before,
+.fields.bus .busBox::before,
+.fields.country .countryBox::before,
+.fields.industry .industryBox::before,
+.fields.us .usBox::before,
+.fields.message .messageBox::before {
+  color: transparent;
 }
