@@ -3,8 +3,24 @@ import styles from "./Contact.module.css";
 
 function Contact() {
   const [focusedInput, setFocusedInput] = useState("");
+  const [nonEmptyInput, setNonEmptyInput] = useState({
+    name: false,
+    email: false,
+    tel: false,
+    bus: false,
+    country: false,
+    industry: false,
+    us: false,
+    message: false,
+  });
+
   const triggerFocus = (event) => setFocusedInput(event.target.id);
   const triggerBlur = () => setFocusedInput("");
+  const triggerNonEmpty = (event) => {
+    const target = event.target;
+    // Set true for non empty and false otherwise
+    setNonEmptyInput((prev) => ({ ...prev, [target.id]: target.value !== "" }));
+  };
 
   return (
     <section className={styles.contact}>
@@ -19,9 +35,18 @@ function Contact() {
       </section>
       <section className={styles.fieldsBox}>
         <form
-          className={`${styles.fields} ${
-            focusedInput ? styles[focusedInput] : ""
-          }`}
+          className={`
+            ${styles.fields} 
+          ${focusedInput && styles[focusedInput]} 
+          ${nonEmptyInput.name && styles.name}
+          ${nonEmptyInput.email && styles.email}
+          ${nonEmptyInput.tel && styles.tel}
+          ${nonEmptyInput.bus && styles.bus}
+          ${nonEmptyInput.country && styles.country}
+          ${nonEmptyInput.industry && styles.industry}
+          ${nonEmptyInput.us && styles.us}
+          ${nonEmptyInput.message && styles.message}
+          `}
         >
           <section className={styles.firstFields}>
             <div className={styles.nameBox}>
@@ -32,6 +57,8 @@ function Contact() {
                 id="name"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
             <div className={styles.emailBox}>
@@ -42,6 +69,8 @@ function Contact() {
                 id="email"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
             <div className={styles.telBox}>
@@ -52,6 +81,8 @@ function Contact() {
                 id="tel"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
           </section>
@@ -64,6 +95,8 @@ function Contact() {
                 id="bus"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
             <div className={styles.countryBox}>
@@ -74,6 +107,8 @@ function Contact() {
                 id="country"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
             <div className={styles.industryBox}>
@@ -84,6 +119,8 @@ function Contact() {
                 id="industry"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
           </section>
@@ -129,6 +166,8 @@ function Contact() {
                 id="us"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
             <div className={styles.messageBox}>
@@ -141,6 +180,8 @@ function Contact() {
                 maxLength="3000"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
               />
             </div>
           </section>
