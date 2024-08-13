@@ -13,13 +13,27 @@ function Contact() {
     us: false,
     message: false,
   });
+  const [nonEmptyCheckBox, setNonEmptyCheckBox] = useState({
+    website: false,
+    ui: false,
+    seo: false,
+    marketing: false,
+    graphic: false,
+    brand: false,
+    suite: false,
+  });
 
   const triggerFocus = (event) => setFocusedInput(event.target.id);
   const triggerBlur = () => setFocusedInput("");
+
   const triggerNonEmpty = (event) => {
     const target = event.target;
     // Set true for non empty and false otherwise
     setNonEmptyInput((prev) => ({ ...prev, [target.id]: target.value !== "" }));
+  };
+  const check = (event) => {
+    const target = event.target;
+    setNonEmptyCheckBox((prev) => ({ ...prev, [target.id]: target.checked }));
   };
 
   return (
@@ -46,6 +60,13 @@ function Contact() {
           ${nonEmptyInput.industry && styles.industry}
           ${nonEmptyInput.us && styles.us}
           ${nonEmptyInput.message && styles.message}
+          ${nonEmptyCheckBox.website && styles.website}
+          ${nonEmptyCheckBox.ui && styles.ui}
+          ${nonEmptyCheckBox.seo && styles.seo}
+          ${nonEmptyCheckBox.marketing && styles.marketing}
+          ${nonEmptyCheckBox.graphic && styles.graphic}
+          ${nonEmptyCheckBox.brand && styles.brand}
+          ${nonEmptyCheckBox.suite && styles.suite}
           `}
         >
           <section className={styles.firstFields}>
@@ -128,31 +149,56 @@ function Contact() {
             <h3>Service</h3>
             <section className={styles.services}>
               <div>
-                <input type="checkbox" name="website" id="website" />
+                <input
+                  type="checkbox"
+                  name="website"
+                  id="website"
+                  onChange={check}
+                />
                 <label htmlFor="website">Website</label>
               </div>
               <div>
-                <input type="checkbox" name="ui" id="ui" />
+                <input type="checkbox" name="ui" id="ui" onChange={check} />
                 <label htmlFor="ui">UI/UX Design</label>
               </div>
               <div>
-                <input type="checkbox" name="seo" id="seo" />
+                <input type="checkbox" name="seo" id="seo" onChange={check} />
                 <label htmlFor="seo">SEO</label>
               </div>
               <div>
-                <input type="checkbox" name="marketing" id="marketing" />
+                <input
+                  type="checkbox"
+                  name="marketing"
+                  id="marketing"
+                  onChange={check}
+                />
                 <label htmlFor="marketing">Marketing</label>
               </div>
               <div>
-                <input type="checkbox" name="graphic" id="graphic" />
+                <input
+                  type="checkbox"
+                  name="graphic"
+                  id="graphic"
+                  onChange={check}
+                />
                 <label htmlFor="graphic">Graphic Design</label>
               </div>
               <div>
-                <input type="checkbox" name="brand" id="brand" />
+                <input
+                  type="checkbox"
+                  name="brand"
+                  id="brand"
+                  onChange={check}
+                />
                 <label htmlFor="brand">Brand Design</label>
               </div>
               <div>
-                <input type="checkbox" name="suite" id="suite" />
+                <input
+                  type="checkbox"
+                  name="suite"
+                  id="suite"
+                  onChange={check}
+                />
                 <label htmlFor="suite">Suite</label>
               </div>
             </section>
