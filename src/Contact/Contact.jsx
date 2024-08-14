@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
+import { FetchCountries } from "./FetchCountries";
 
 function Contact() {
   const [focusedInput, setFocusedInput] = useState("");
@@ -124,15 +125,16 @@ function Contact() {
             </div>
             <div className={styles.countryBox}>
               <label htmlFor="country">Country</label>
-              <input
-                type="text"
+              <select
                 name="country"
                 id="country"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
-              />
+              >
+                <FetchCountries />
+              </select>
             </div>
             <div className={styles.industryBox}>
               <label htmlFor="industry">Industry</label>
