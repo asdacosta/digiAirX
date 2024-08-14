@@ -112,6 +112,7 @@
   bottom: -2rem;
   color: rgba(0, 0, 0, 0.7);
   transition: bottom 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .firstFields > div:first-child,
