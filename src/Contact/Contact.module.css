@@ -139,6 +139,10 @@
   grid-column: 1 / 2;
 }
 
+.secFields > div:nth-child(2) {
+  max-width: 19.6rem;
+}
+
 .firstFields > div:last-child,
 .secFields > div:last-child {
   grid-row: 2 / -1;
