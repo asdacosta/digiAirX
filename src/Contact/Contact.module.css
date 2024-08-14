@@ -40,16 +40,16 @@
 
 .firstFields input,
 .secFields input,
-.secFields select,
+.fields select,
 .lastFields input {
   height: 1.8rem;
   border-radius: 0.5rem;
   padding: 0 0.3rem;
 }
 
-.secFields select option:hover,
-.secFields select option:checked {
-  background-color: #0077b6;
+.fields select option:hover,
+.fields select option:checked {
+  background-color: #023e8a;
   color: white;
 }
 
@@ -182,7 +182,7 @@
 .firstFields input,
 .secFields input,
 .lastFields input,
-.secFields select,
+.fields select,
 .lastFields textarea {
   border: none;
   outline: none;
@@ -193,7 +193,6 @@
 
 .firstFields input:focus,
 .secFields input:focus,
-.secFields select:focus,
 .lastFields input:focus,
 .lastFields textarea:focus {
   cursor: text;
@@ -201,17 +200,17 @@
 
 .firstFields input:focus,
 .secFields input:focus,
-.secFields select:focus,
+.fields select:focus,
 .lastFields input:focus,
 .lastFields textarea:focus,
 .firstFields input:active,
 .secFields input:active,
-.secFields select:active,
+.fields select:active,
 .lastFields input:active,
 .lastFields textarea:active,
 .firstFields input:hover,
 .secFields input:hover,
-.secFields select:hover,
+.fields select:hover,
 .lastFields input:hover,
 .lastFields textarea:hover {
   outline: 0.13rem solid #0077b6;
