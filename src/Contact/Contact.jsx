@@ -136,7 +136,40 @@ function Contact() {
             </div>
             <div className={styles.industryBox}>
               <label htmlFor="industry">Industry</label>
-              <input
+              <select
+                name="industry"
+                id="industry"
+                onFocus={triggerFocus}
+                onBlur={triggerBlur}
+                onInput={triggerNonEmpty}
+                onChange={triggerNonEmpty}
+              >
+                <option value="" disabled selected></option>
+                <option value="technology">Technology</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="fashion">Fashion & Apparel</option>
+                <option value="arts">Arts</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="sports">Sports</option>
+                <option value="retail">Retail</option>
+                <option value="e-commerce">E-commerce</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="construction">
+                  Construction & Infrastructure
+                </option>
+                <option value="travel">Travel & Tourism</option>
+                <option value="real estate">Real Estate</option>
+                <option value="transportation">Transportation</option>
+                <option value="media">Media & Entertainment</option>
+                <option value="food">Food & Beverage</option>
+                <option value="telecommunication">Telecommunication</option>
+                <option value="legal services">Legal Services</option>
+                <option value="publishing">Publishing</option>
+                <option value="other">Other</option>
+              </select>
+              {/* <input
                 type="text"
                 name="industry"
                 id="industry"
@@ -144,7 +177,7 @@ function Contact() {
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
-              />
+              /> */}
             </div>
           </section>
           <section className={styles.thirdFields}>
