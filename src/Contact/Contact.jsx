@@ -241,15 +241,25 @@ function Contact() {
           <section className={styles.lastFields}>
             <div className={styles.usBox}>
               <label htmlFor="us">How did you hear about us?</label>
-              <input
-                type="text"
+              <select
                 name="us"
                 id="us"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
-              />
+              >
+                <option value="" disabled selected></option>
+                <option value="referral">Referral</option>
+                <option value="search">Online Search</option>
+                <option value="social media">Social Media</option>
+                <option value="advertising">Advertising</option>
+                <option value="email">Email</option>
+                <option value="blog">Blog or Article</option>
+                <option value="newsletter">Newsletter</option>
+                <option value="website">Website</option>
+                <option value="other">Other</option>
+              </select>
             </div>
             <div className={styles.messageBox}>
               <label htmlFor="message">Additional Message</label>
