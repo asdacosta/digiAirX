@@ -234,3 +234,18 @@
 .fields.suite .thirdFields::before {
   color: transparent;
 }
+
+.submit {
+  align-self: center;
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #0077b6;
+  color: white;
+  transition: all 0.25s ease-in-out;
+}
+
+.submit:hover {
+  background-color: #023e8a;
+  box-shadow: 0rem 0rem 0.2rem black;
+}
