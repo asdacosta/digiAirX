@@ -80,6 +80,7 @@ function Contact() {
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
+                required
               />
             </div>
             <div className={styles.emailBox}>
@@ -92,6 +93,7 @@ function Contact() {
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
+                required
               />
             </div>
             <div className={styles.telBox}>
@@ -228,6 +230,7 @@ function Contact() {
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
+                required
               />
             </div>
           </section>
