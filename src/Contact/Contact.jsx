@@ -234,7 +234,9 @@ function Contact() {
               />
             </div>
           </section>
-          <button type="submit">Submit</button>
+          <button type="submit" className={styles.submit}>
+            Send Inquiry
+          </button>
         </form>
       </section>
     </section>
