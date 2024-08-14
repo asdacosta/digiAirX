@@ -47,6 +47,12 @@
   padding: 0 0.3rem;
 }
 
+.secFields select option:hover,
+.secFields select option:checked {
+  background-color: #0077b6;
+  color: white;
+}
+
 .firstFields,
 .secFields {
   display: grid;
