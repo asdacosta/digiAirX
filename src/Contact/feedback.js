@@ -1,4 +1,4 @@
-const feedbacks = {
+const allFeedbacks = {
   name: [
     "No special symbols allowed.",
     "No numbers allowed.",
@@ -8,4 +8,4 @@ const feedbacks = {
   tel: ["Enter a valid phone number or leave blank."],
 };
 
-export { feedbacks };
+export { allFeedbacks };
