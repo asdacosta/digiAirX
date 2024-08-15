@@ -268,8 +268,12 @@
 
 .feedback {
   font-size: 0.75rem;
+  font-weight: 500;
   position: absolute;
   margin-left: 0.3rem;
   bottom: -1rem;
-  color: yellow;
+  color: #03045e;
+  background-color: yellow;
+  padding: 0 0.3rem;
+  border-radius: 0.2rem;
 }
