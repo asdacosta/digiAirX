@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./Contact.module.css";
 import { FetchCountries } from "./FetchCountries";
 import { allFeedbacks } from "./feedback";
@@ -43,10 +43,20 @@ function Contact() {
   };
 
   const handleNameBlur = (event) => {
-    const content = event.currentTarget.textContent;
-    const hasNumber = /\d/.test(content);
-    if (hasNumber)
-      setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[1] }));
+    const content = event.currentTarget.value;
+    if (content === "") {
+      setFocusedInput("");
+    } else {
+      const hasNumber = /\d/.test(content);
+      const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(content);
+      if (hasNumber) {
+        setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[1] }));
+      } else if (!hasNoSpecialChar) {
+        setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[0] }));
+      } else if (content.length <= 2) {
+        setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[3] }));
+      }
+    }
   };
 
   return (
@@ -90,7 +100,7 @@ function Contact() {
                 name="name"
                 id="name"
                 onFocus={triggerFocus}
-                onBlur={triggerBlur}
+                onBlur={handleNameBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
                 required
