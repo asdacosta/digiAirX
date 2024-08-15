@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./Contact.module.css";
 import { FetchCountries } from "./FetchCountries";
+import { allFeedbacks } from "./feedback";
 
 function Contact() {
   const [focusedInput, setFocusedInput] = useState("");
@@ -23,10 +24,14 @@ function Contact() {
     brand: false,
     suite: false,
   });
+  const [feedbacks, setFeedbacks] = useState({
+    name: "",
+    email: "",
+    tel: "",
+  });
 
   const triggerFocus = (event) => setFocusedInput(event.target.id);
   const triggerBlur = () => setFocusedInput("");
-
   const triggerNonEmpty = (event) => {
     const target = event.target;
     // Set true for non empty and false otherwise
@@ -35,6 +40,13 @@ function Contact() {
   const check = (event) => {
     const target = event.target;
     setNonEmptyCheckBox((prev) => ({ ...prev, [target.id]: target.checked }));
+  };
+
+  const handleNameBlur = (event) => {
+    const content = event.currentTarget.textContent;
+    const hasNumber = /\d/.test(content);
+    if (hasNumber)
+      setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[1] }));
   };
 
   return (
@@ -83,6 +95,7 @@ function Contact() {
                 onChange={triggerNonEmpty}
                 required
               />
+              <span className={styles.feedback}>{feedbacks.name}</span>
             </div>
             <div className={styles.emailBox}>
               <label htmlFor="email">Email Address</label>
@@ -96,6 +109,7 @@ function Contact() {
                 onChange={triggerNonEmpty}
                 required
               />
+              <span className={styles.feedback}>{feedbacks.email}</span>
             </div>
             <div className={styles.telBox}>
               <label htmlFor="tel">Phone Number</label>
@@ -108,6 +122,7 @@ function Contact() {
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
               />
+              <span className={styles.feedback}>{feedbacks.tel}</span>
             </div>
           </section>
           <section className={styles.secFields}>
