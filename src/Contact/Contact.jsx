@@ -48,6 +48,7 @@ function Contact() {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, name: "" }));
     } else {
+      // Validate name
       const hasNumber = /\d/.test(content);
       const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(content);
 
@@ -59,6 +60,22 @@ function Contact() {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[2] }));
       } else {
         setFeedbacks((prev) => ({ ...prev, name: "" }));
+      }
+    }
+  };
+
+  const handleEmailBlur = (event) => {
+    const content = event.currentTarget.value;
+    if (content === "") {
+      setFocusedInput("");
+      setFeedbacks((prev) => ({ ...prev, email: "" }));
+    } else {
+      // Validate mail
+      const mailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\s*$/;
+      if (!mailRegex.test(content)) {
+        setFeedbacks((prev) => ({ ...prev, email: allFeedbacks.email[0] }));
+      } else {
+        setFeedbacks((prev) => ({ ...prev, email: "" }));
       }
     }
   };
@@ -118,7 +135,7 @@ function Contact() {
                 name="email"
                 id="email"
                 onFocus={triggerFocus}
-                onBlur={triggerBlur}
+                onBlur={handleEmailBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
                 required
