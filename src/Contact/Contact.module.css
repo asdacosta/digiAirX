@@ -265,3 +265,11 @@
   background-color: #023e8a;
   box-shadow: 0rem 0rem 0.2rem black;
 }
+
+.feedback {
+  font-size: 0.75rem;
+  position: absolute;
+  margin-left: 0.3rem;
+  bottom: -1rem;
+  color: yellow;
+}
