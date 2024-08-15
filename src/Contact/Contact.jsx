@@ -46,15 +46,19 @@ function Contact() {
     const content = event.currentTarget.value;
     if (content === "") {
       setFocusedInput("");
+      setFeedbacks((prev) => ({ ...prev, name: "" }));
     } else {
       const hasNumber = /\d/.test(content);
       const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(content);
+
       if (hasNumber) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[1] }));
       } else if (!hasNoSpecialChar) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[0] }));
-      } else if (content.length <= 2) {
-        setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[3] }));
+      } else if (content.length < 2) {
+        setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[2] }));
+      } else {
+        setFeedbacks((prev) => ({ ...prev, name: "" }));
       }
     }
   };
