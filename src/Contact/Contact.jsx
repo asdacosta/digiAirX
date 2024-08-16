@@ -28,6 +28,7 @@ function Contact() {
     name: "",
     email: "",
     tel: "",
+    message: "",
   });
 
   const triggerFocus = (event) => setFocusedInput(event.target.id);
@@ -94,6 +95,20 @@ function Contact() {
         setFeedbacks((prev) => ({ ...prev, tel: "" }));
       } else {
         setFeedbacks((prev) => ({ ...prev, tel: allFeedbacks.tel[0] }));
+      }
+    }
+  };
+
+  const handleMessageBlur = (event) => {
+    const content = event.currentTarget.value.trim();
+    if (content === "") {
+      setFocusedInput("");
+      setFeedbacks((prev) => ({ ...prev, tel: "" }));
+    } else {
+      if (content.length < 2) {
+        setFeedbacks((prev) => ({ ...prev, message: allFeedbacks.name[2] }));
+      } else {
+        setFeedbacks((prev) => ({ ...prev, message: "" }));
       }
     }
   };
@@ -336,11 +351,12 @@ function Contact() {
                 rows="10"
                 maxLength="3000"
                 onFocus={triggerFocus}
-                onBlur={triggerBlur}
+                onBlur={handleMessageBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
                 required
               />
+              <span className={styles.feedback}>{feedbacks.message}</span>
             </div>
           </section>
           <button type="submit" className={styles.submit}>
