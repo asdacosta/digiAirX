@@ -34,34 +34,31 @@ function Contact() {
   const triggerFocus = (event) => setFocusedInput(event.target.id);
   const triggerBlur = () => setFocusedInput("");
   const triggerNonEmpty = (event) => {
-    const target = event.target;
-    // Set true for non empty and false otherwise
-    setNonEmptyInput((prev) => ({ ...prev, [target.id]: target.value !== "" }));
+    const inputName = event.target.id;
+    const value = event.target.value.trim();
+    setNonEmptyInput((prev) => ({ ...prev, [inputName]: value !== "" })); // Set true for non empty and false otherwise
   };
   const check = (event) => {
-    const target = event.target;
-    setNonEmptyCheckBox((prev) => ({ ...prev, [target.id]: target.checked }));
+    const inputName = event.target.id;
+    const isChecked = event.target.checked;
+    setNonEmptyCheckBox((prev) => ({ ...prev, [inputName]: isChecked }));
   };
 
   const handleNameBlur = (event) => {
-    const content = event.currentTarget.value;
-    const trimmedContent = event.currentTarget.value.trim();
+    const content = event.currentTarget.value.trim();
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, name: "" }));
-    } else if (trimmedContent === "") {
-      // Validate values with only whitespace
-      setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[3] }));
     } else {
       // Validate name
-      const hasNumber = /\d/.test(trimmedContent);
-      const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(trimmedContent);
+      const hasNumber = /\d/.test(content);
+      const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(content);
 
       if (hasNumber) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[1] }));
       } else if (!hasNoSpecialChar) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[0] }));
-      } else if (trimmedContent.length < 2) {
+      } else if (content.length < 2) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[2] }));
       } else {
         setFeedbacks((prev) => ({ ...prev, name: "" }));
