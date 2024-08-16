@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Contact.module.css";
 import { FetchCountries } from "./FetchCountries";
 import { allFeedbacks } from "./feedback";
@@ -30,6 +30,36 @@ function Contact() {
     tel: "",
     message: "",
   });
+  const [requiredFieldsStatus, setRequiredFieldsStatus] = useState({
+    name: false,
+    email: false,
+    service: false,
+    message: false,
+  });
+  const [allowSubmit, setAllowSubmit] = useState({
+    submit: false,
+    value: "Complete Form",
+  });
+
+  const triggerSubmit = () => {
+    const allPassed = Object.values(requiredFieldsStatus).every(
+      (input) => input === true
+    );
+    allPassed
+      ? setAllowSubmit({ submit: true, value: "Send Inquiry" })
+      : setAllowSubmit({ submit: false, value: "Complete Form" });
+  };
+  useEffect(triggerSubmit, [requiredFieldsStatus]);
+
+  const makeServiceValidOnAtLeastOneSelection = () => {
+    const selected = Object.values(nonEmptyCheckBox).some(
+      (option) => option === true
+    );
+    selected
+      ? setRequiredFieldsStatus((prev) => ({ ...prev, service: true }))
+      : setRequiredFieldsStatus((prev) => ({ ...prev, service: false }));
+  };
+  useEffect(makeServiceValidOnAtLeastOneSelection, [nonEmptyCheckBox]);
 
   const triggerFocus = (event) => setFocusedInput(event.target.id);
   const triggerBlur = () => setFocusedInput("");
@@ -49,10 +79,13 @@ function Contact() {
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, name: "" }));
+      setRequiredFieldsStatus((prev) => ({ ...prev, name: false }));
     } else {
       // Validate name
       const hasNumber = /\d/.test(content);
       const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(content);
+      // Make input invalid at start
+      setRequiredFieldsStatus((prev) => ({ ...prev, name: false }));
 
       if (hasNumber) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[1] }));
@@ -62,6 +95,7 @@ function Contact() {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[2] }));
       } else {
         setFeedbacks((prev) => ({ ...prev, name: "" }));
+        setRequiredFieldsStatus((prev) => ({ ...prev, name: true }));
       }
     }
   };
@@ -71,13 +105,18 @@ function Contact() {
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, email: "" }));
+      setRequiredFieldsStatus((prev) => ({ ...prev, name: false }));
     } else {
       // Validate mail
       const mailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\s*$/;
+      // Make input invalid at start
+      setRequiredFieldsStatus((prev) => ({ ...prev, email: false }));
+
       if (!mailRegex.test(content)) {
         setFeedbacks((prev) => ({ ...prev, email: allFeedbacks.email[0] }));
       } else {
         setFeedbacks((prev) => ({ ...prev, email: "" }));
+        setRequiredFieldsStatus((prev) => ({ ...prev, email: true }));
       }
     }
   };
@@ -105,11 +144,16 @@ function Contact() {
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, tel: "" }));
+      setRequiredFieldsStatus((prev) => ({ ...prev, message: false }));
     } else {
+      // Make input invalid at start
+      setRequiredFieldsStatus((prev) => ({ ...prev, message: false }));
+
       if (content.length < 2) {
         setFeedbacks((prev) => ({ ...prev, message: allFeedbacks.name[2] }));
       } else {
         setFeedbacks((prev) => ({ ...prev, message: "" }));
+        setRequiredFieldsStatus((prev) => ({ ...prev, message: true }));
       }
     }
   };
@@ -360,8 +404,13 @@ function Contact() {
               <span className={styles.feedback}>{feedbacks.message}</span>
             </div>
           </section>
-          <button type="submit" className={styles.submit}>
-            Send Inquiry
+          <button
+            type="submit"
+            className={`${styles.submitButton} ${
+              allowSubmit.submit ? styles.submit : ""
+            }`}
+          >
+            {allowSubmit.value}
           </button>
         </form>
       </section>
