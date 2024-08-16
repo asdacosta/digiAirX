@@ -44,20 +44,24 @@ function Contact() {
   };
 
   const handleNameBlur = (event) => {
-    const content = event.currentTarget.value.trim();
+    const content = event.currentTarget.value;
+    const trimmedContent = event.currentTarget.value.trim();
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, name: "" }));
+    } else if (trimmedContent === "") {
+      // Validate values with only whitespace
+      setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[3] }));
     } else {
       // Validate name
-      const hasNumber = /\d/.test(content);
-      const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(content);
+      const hasNumber = /\d/.test(trimmedContent);
+      const hasNoSpecialChar = /^[a-zA-Z'-\s]+$/.test(trimmedContent);
 
       if (hasNumber) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[1] }));
       } else if (!hasNoSpecialChar) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[0] }));
-      } else if (content.length < 2) {
+      } else if (trimmedContent.length < 2) {
         setFeedbacks((prev) => ({ ...prev, name: allFeedbacks.name[2] }));
       } else {
         setFeedbacks((prev) => ({ ...prev, name: "" }));
