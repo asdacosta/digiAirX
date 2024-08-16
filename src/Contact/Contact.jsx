@@ -295,15 +295,6 @@ function Contact() {
                 <option value="publishing">Publishing</option>
                 <option value="other">Other</option>
               </select>
-              {/* <input
-                type="text"
-                name="industry"
-                id="industry"
-                onFocus={triggerFocus}
-                onBlur={triggerBlur}
-                onInput={triggerNonEmpty}
-                onChange={triggerNonEmpty}
-              /> */}
             </div>
           </section>
           <section className={styles.thirdFields}>
