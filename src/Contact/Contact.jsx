@@ -43,7 +43,7 @@ function Contact() {
   };
 
   const handleNameBlur = (event) => {
-    const content = event.currentTarget.value;
+    const content = event.currentTarget.value.trim();
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, name: "" }));
@@ -65,7 +65,7 @@ function Contact() {
   };
 
   const handleEmailBlur = (event) => {
-    const content = event.currentTarget.value;
+    const content = event.currentTarget.value.trim();
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, email: "" }));
@@ -81,7 +81,7 @@ function Contact() {
   };
 
   const handleTelBlur = (event) => {
-    const content = event.currentTarget.value;
+    const content = event.currentTarget.value.trim();
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, tel: "" }));
