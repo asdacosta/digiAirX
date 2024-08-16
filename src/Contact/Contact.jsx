@@ -105,7 +105,7 @@ function Contact() {
     if (content === "") {
       setFocusedInput("");
       setFeedbacks((prev) => ({ ...prev, email: "" }));
-      setRequiredFieldsStatus((prev) => ({ ...prev, name: false }));
+      setRequiredFieldsStatus((prev) => ({ ...prev, email: false }));
     } else {
       // Validate mail
       const mailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\s*$/;
@@ -143,7 +143,7 @@ function Contact() {
     const content = event.currentTarget.value.trim();
     if (content === "") {
       setFocusedInput("");
-      setFeedbacks((prev) => ({ ...prev, tel: "" }));
+      setFeedbacks((prev) => ({ ...prev, message: "" }));
       setRequiredFieldsStatus((prev) => ({ ...prev, message: false }));
     } else {
       // Make input invalid at start
