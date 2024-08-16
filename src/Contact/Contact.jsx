@@ -80,6 +80,24 @@ function Contact() {
     }
   };
 
+  const handleTelBlur = (event) => {
+    const content = event.currentTarget.value;
+    if (content === "") {
+      setFocusedInput("");
+      setFeedbacks((prev) => ({ ...prev, tel: "" }));
+    } else {
+      // Validate tel
+      const telRegex =
+        /^\+?(\d{1,4})?[\s\-()]?(\d{1,4})[\s\-()]?(\d{1,4})[\s\-()]?(\d{1,9})$/;
+
+      if (telRegex.test(content)) {
+        setFeedbacks((prev) => ({ ...prev, tel: "" }));
+      } else {
+        setFeedbacks((prev) => ({ ...prev, tel: allFeedbacks.tel[0] }));
+      }
+    }
+  };
+
   return (
     <section className={styles.contact}>
       <section>
@@ -149,7 +167,7 @@ function Contact() {
                 name="tel"
                 id="tel"
                 onFocus={triggerFocus}
-                onBlur={triggerBlur}
+                onBlur={handleTelBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
               />
