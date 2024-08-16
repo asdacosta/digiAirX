@@ -251,7 +251,7 @@
   color: transparent;
 }
 
-.submit {
+.submitButton {
   align-self: center;
   font-size: 1.1rem;
   padding: 0.2rem 1rem;
@@ -259,11 +259,16 @@
   background-color: #0077b6;
   color: white;
   transition: all 0.25s ease-in-out;
+  pointer-events: none;
 }
 
-.submit:hover {
-  background-color: #023e8a;
+.submitButton:hover {
   box-shadow: 0rem 0rem 0.2rem black;
+}
+
+.submitButton.submit {
+  pointer-events: auto;
+  background-color: #023e8a;
 }
 
 .feedback {
