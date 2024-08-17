@@ -24,7 +24,7 @@ function Services() {
               loop
               speed={0.7}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/website.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>Website Development</span>
@@ -36,7 +36,7 @@ function Services() {
               loop
               speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/webapp.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>Web App Development</span>
@@ -48,7 +48,7 @@ function Services() {
               loop
               speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/uiux.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>UI/UX Design</span>
@@ -60,7 +60,7 @@ function Services() {
               loop
               speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/seo.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>SEO</span>
@@ -72,7 +72,7 @@ function Services() {
               loop
               speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/marketing.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>Marketing</span>
@@ -84,7 +84,7 @@ function Services() {
               loop
               speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/design.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>Graphic Design</span>
@@ -96,7 +96,7 @@ function Services() {
               loop
               speed={0.8}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/branding.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>Brand Design</span>
@@ -108,7 +108,7 @@ function Services() {
               loop
               speed={0.9}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/package.json"
-              style={{ width: "20rem", height: "20rem" }}
+              style={{ width: "18rem", height: "16rem" }}
             ></Lot>
           </div>
           <span>Suite</span>
