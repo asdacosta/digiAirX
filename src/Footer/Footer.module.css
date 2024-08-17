@@ -37,12 +37,12 @@
 }
 
 .info img {
-  width: 2rem;
+  width: 1.8rem;
   transform: translateY(0.1rem);
 }
 
 .info h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: left;
 }
 
@@ -54,8 +54,8 @@
 }
 
 .startButton {
-  font-size: 1.2rem;
-  padding: 0.2rem 1rem;
+  font-size: 1.1rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 0.5rem;
   color: white;
   background: linear-gradient(150deg, #03045e 40%, #0077b6);
