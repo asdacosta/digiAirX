@@ -13,13 +13,13 @@
   user-select: none;
 }
 
-.contact h2 {
+.headerBox h2 {
   font-size: 2.5rem;
   font-weight: 600;
   color: #0077b6;
 }
 
-.contact svg {
+.headerBox svg {
   width: 1.8rem;
   fill: #0077b6;
   animation: rotateGlobe 5s linear infinite;
@@ -280,4 +280,66 @@
   background-color: yellow;
   padding: 0 0.3rem;
   border-radius: 0.2rem;
+}
+
+.swiftContact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.swiftContact h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0077b6;
+}
+
+.swiftCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #03045e;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.swiftCard > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.swiftCard span {
+  color: white;
+  font-size: 0.9rem;
+  user-select: auto;
+}
+
+.swiftCard svg {
+  width: 1.2rem;
+  fill: white;
+}
+
+span.copy {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0 0.3rem;
+  margin-left: 0.5rem;
+  background-color: white;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: #03045e;
+  cursor: pointer;
+  position: relative;
+}
+
+span.copy::before {
+  content: "";
+  position: absolute;
+  left: -0.6rem;
+  width: 0;
+  height: 0;
+  border-top: 0.4rem solid transparent;
+  border-bottom: 0.4rem solid transparent;
+  border-right: 0.6rem solid white;
 }
