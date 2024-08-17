@@ -52,7 +52,7 @@
 }
 
 .actionButtons svg {
-  width: 1.4rem;
+  width: 1.2rem;
   fill: white;
   transition: fill 0.25s;
 }
@@ -64,8 +64,8 @@
   gap: 0.5rem;
   font-size: 1.2rem;
   height: fit-content;
-  width: 12rem;
-  padding: 0.5rem 0;
+  width: 11rem;
+  padding: 0.4rem 0;
   border-radius: 0.5rem;
   color: white;
   background-color: #023e8a;
@@ -77,7 +77,7 @@
 .actionButtons button:hover {
   background-color: rgb(206, 207, 224);
   color: #023e8a;
-  border: 0.1rem solid #023e8a;
+  border: 0.05rem solid #023e8a;
 }
 
 .actionButtons button:hover svg {
