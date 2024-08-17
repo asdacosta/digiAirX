@@ -420,7 +420,7 @@ function Contact() {
         </form>
       </section>
       <section className={styles.swiftContact}>
-        <h2>Reach Out Swiftly</h2>
+        <h2>Reach Out Swiftly...</h2>
         <section className={styles.swiftCard}>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
