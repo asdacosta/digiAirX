@@ -309,37 +309,14 @@
   gap: 0.5rem;
 }
 
-.swiftCard span {
+.swiftTel,
+.swiftMail {
   color: white;
   font-size: 0.9rem;
-  user-select: auto;
+  user-select: all;
 }
 
 .swiftCard svg {
   width: 1.2rem;
   fill: white;
-}
-
-span.copy {
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0 0.3rem;
-  margin-left: 0.5rem;
-  background-color: white;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  color: #03045e;
-  cursor: pointer;
-  position: relative;
-}
-
-span.copy::before {
-  content: "";
-  position: absolute;
-  left: -0.6rem;
-  width: 0;
-  height: 0;
-  border-top: 0.4rem solid transparent;
-  border-bottom: 0.4rem solid transparent;
-  border-right: 0.6rem solid white;
 }
