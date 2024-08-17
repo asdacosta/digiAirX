@@ -404,6 +404,9 @@ function Contact() {
             {allowSubmit.value}
           </button>
         </form>
+        <section className={styles.directContact}>
+          <h2>Reach Out Swiftly</h2>
+        </section>
       </section>
     </section>
   );
