@@ -20,7 +20,7 @@ function Load({ endOnComplete }) {
         dotLottieRefCallback={lottieRefCall}
         speed={1.5}
         src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/load.json"
-        style={{ width: "20rem", height: "20rem" }}
+        style={{ width: "15rem", height: "15rem" }}
       ></Lot>
     </section>
   );
