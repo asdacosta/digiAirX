@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 0.8rem;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   position: absolute;
@@ -114,7 +114,7 @@
 }
 
 .floated button svg {
-  width: 1.2rem;
+  width: 1.1rem;
   fill: white;
   transition: fill 0.25s;
 }
