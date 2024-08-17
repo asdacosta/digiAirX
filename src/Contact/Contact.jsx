@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Contact.module.css";
 import { FetchCountries } from "./FetchCountries";
 import { allFeedbacks } from "./feedback";
+import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 
 function Contact() {
   const [focusedInput, setFocusedInput] = useState("");
@@ -168,6 +169,19 @@ function Contact() {
           </svg>
           RLDWIDE REMOTE SERVICES
         </h2>
+        <div className={styles.availability}>
+          <div>
+            <Lot
+              autoplay
+              loop
+              speed={0.7}
+              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/247.json"
+              style={{ width: "8rem", height: "8rem" }}
+            ></Lot>
+          </div>
+          <span>Our team is available remotely 24/7 to meet your needs.</span>
+        </div>
+        <p>Expect a response within 24 hours after sending your inquiry.</p>
       </section>
       <section className={styles.fieldsBox}>
         <form
