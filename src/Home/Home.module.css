@@ -132,7 +132,7 @@ h1 {
 }
 
 .socials svg {
-  width: 2rem;
+  width: 1.7rem;
   fill: #03045e;
   cursor: pointer;
   filter: blur(5rem);
@@ -188,7 +188,7 @@ h1 {
 }
 
 .actionButtons svg {
-  width: 1.5rem;
+  width: 1.4rem;
   fill: white;
   transition: fill 0.25s;
 }
@@ -198,10 +198,10 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   height: fit-content;
-  width: 13rem;
-  padding: 0.5rem 0;
+  width: 12rem;
+  padding: 0.4rem 0;
   border-radius: 0.5rem;
   color: white;
   background-color: #023e8a;
