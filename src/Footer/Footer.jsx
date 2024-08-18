@@ -40,17 +40,19 @@ function Footer() {
             </div>
           </section>
         </section>
-        <section className={styles.quickLinks}>
-          <h4>Quick Links</h4>
-          <button>Home</button>
-          <button>About</button>
-          <button>Services</button>
-          <button>Contact</button>
-        </section>
-        <section className={styles.support}>
-          <h4>Support</h4>
-          <button>Have a question?</button>
-          <button>FAQ</button>
+        <section className={styles.directLinks}>
+          <section className={styles.quickLinks}>
+            <h4>Quick Links</h4>
+            <button>Home</button>
+            <button>About</button>
+            <button>Services</button>
+            <button>Contact</button>
+          </section>
+          <section className={styles.support}>
+            <h4>Support</h4>
+            <button>Have a question?</button>
+            <button>FAQ</button>
+          </section>
         </section>
       </section>
       <section className={styles.copyrightBox}>
