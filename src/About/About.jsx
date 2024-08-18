@@ -4,7 +4,7 @@ function About() {
   return (
     <section className={styles.about}>
       <section>
-        <h2>Discover Our Company</h2>
+        <h2>Discover Us</h2>
         <section className={styles.card}>
           <p>
             At DigiairX, we are devoted to helping businesses achieve success in
@@ -68,7 +68,7 @@ function About() {
         </section>
       </section>
       <section>
-        <h2>What Our Clients Say</h2>
+        <h2>Client Experiences</h2>
         <section className={styles.card}>
           <p>
             Our clients consistently express their satisfaction with our
