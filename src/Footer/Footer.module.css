@@ -95,14 +95,29 @@
   gap: 1.5rem;
 }
 
-.quickLinks button,
-.support button {
+.directLinks button {
   font-size: 0.85rem;
   color: white;
   background-color: transparent;
   padding: 0;
   text-align: left;
   white-space: nowrap;
+}
+.directLinks button::after {
+  display: block;
+  position: relative;
+  content: "";
+  background-color: white;
+  height: 0.1rem;
+  bottom: -0.1rem;
+  left: 50%;
+  width: 0;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.directLinks button:hover::after {
+  left: 0;
+  width: 100%;
 }
 
 .allLinks h4 {
