@@ -1,24 +1,33 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import styles from "./Nav.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import logo from "../assets/logo.png";
+import darkLogo from "../assets/logo-dark.png";
+import { ThemeContext } from "../App";
 
 function Nav() {
   const [lottie, setLottie] = useState(null);
-  const [theme, setTheme] = useState(true);
   const [menuOpened, setMenuOpened] = useState(false);
   const [segment, setSegment] = useState([0, 30]);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   const switchRef = (lottie) => setLottie(lottie);
   const menuRef = useRef(null);
 
   const playSwitch = () => {
     if (!lottie) return;
+
+    if (theme === "light") {
+      setSegment([0, 30]);
+      setTheme("dark");
+    } else {
+      setSegment([30, 60]);
+      setTheme("light");
+    }
     lottie.play();
-    setTheme((prev) => !prev);
-    theme ? setSegment([0, 30]) : setSegment([30, 60]);
   };
+
   const playMenu = () => {
     if (!menuRef.current) return;
     menuOpened
@@ -32,7 +41,7 @@ function Nav() {
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
-        <img src={logo} alt="Digiairx logo" />
+        <img src={theme === "light" ? logo : darkLogo} alt="Digiairx logo" />
       </section>
       <section className={styles.right}>
         <section className={styles.links}>
