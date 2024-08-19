@@ -1,10 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 import logo from "../assets/logo.png";
+import darkLogo from "../assets/logo-dark.png";
+import { ThemeContext } from "../App";
 
 function Home() {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   const mainHeaderRef = useRef(null);
   const typeMainHeader = () => {
     const typed = new Typed(mainHeaderRef.current, {
@@ -51,7 +55,10 @@ function Home() {
       <section className={styles.firstHome}>
         <section className={styles.intro}>
           <h1>
-            <img src={logo} alt="Digiairx logo" />
+            <img
+              src={theme === "light" ? logo : darkLogo}
+              alt="Digiairx logo"
+            />
             DigiairX
           </h1>
           <div className={styles.headerBox}>
