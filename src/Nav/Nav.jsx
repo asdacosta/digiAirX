@@ -21,17 +21,26 @@ function Nav() {
         <img src={logo} alt="Digiairx logo" />
       </section>
       <section className={styles.right}>
-        <button>Home</button>
-        <button>About</button>
-        <button>Services</button>
-        <button>Contact</button>
-        <button onClick={play}>
+        <section className={styles.links}>
+          <button>Home</button>
+          <button>About</button>
+          <button>Services</button>
+          <button>Contact</button>
+        </section>
+        <button onClick={play} className={styles.switch}>
           <Lot
             segment={segment}
             speed={2}
             dotLottieRefCallback={lottieRef}
-            src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.lottie"
-            style={{ width: "70px", height: "30px" }}
+            src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.json"
+            style={{ width: "50px", height: "30px" }}
+          ></Lot>
+        </button>
+        <button className={styles.menu}>
+          <Lot
+            speed={2}
+            src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/menu.json"
+            style={{ width: "50px", height: "43px" }}
           ></Lot>
         </button>
       </section>
