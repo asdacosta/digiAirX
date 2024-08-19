@@ -15,10 +15,15 @@
 .right {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   background-color: #0077b6;
   border-radius: 0.5rem;
   padding-left: 0.7rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nav button {
@@ -29,7 +34,7 @@
   user-select: none;
 }
 
-.right button:not(:last-child):after {
+.links button:after {
   display: block;
   position: relative;
   content: "";
@@ -41,7 +46,29 @@
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-.right button:hover::after {
+.links button:hover::after {
   left: 0;
   width: 100%;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    display: block;
+  }
+
+  .right {
+    background-color: transparent;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .logoBox img {
+    width: 3rem;
+  }
 }
