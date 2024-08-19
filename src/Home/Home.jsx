@@ -54,9 +54,9 @@ function Home() {
             <img src={logo} alt="Digiairx logo" />
             DigiairX
           </h1>
-          <p className={styles.headerBox}>
+          <div className={styles.headerBox}>
             <h2 ref={mainHeaderRef}></h2>
-          </p>
+          </div>
           <p className={styles.infoBox}>
             <span className={styles.info} ref={infoRef}></span>
           </p>
