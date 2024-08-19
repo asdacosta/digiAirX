@@ -37,3 +37,8 @@ textarea,
 select {
   font-family: "Montserrat", sans-serif;
 }
+
+body[data-theme="dark"] #root {
+  color: rgb(220, 220, 220);
+  font-weight: 400;
+}
