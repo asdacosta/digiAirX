@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { Parallax } from "@tsparticles/engine";
 
 const Background = () => {
   const [init, setInit] = useState(false);
@@ -18,10 +17,6 @@ const Background = () => {
       setInit(true);
     });
   }, []);
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
 
   const options = useMemo(
     () => ({
@@ -203,13 +198,7 @@ const Background = () => {
   );
 
   if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
+    return <Particles id="tsparticles" options={options} />;
   }
 
   return <></>;
