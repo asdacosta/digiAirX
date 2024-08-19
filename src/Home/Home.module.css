@@ -141,7 +141,22 @@ h1 {
 
 .socials svg:hover {
   scale: 1.1;
-  fill: #03045e;
+}
+
+.x:hover {
+  fill: rgb(44, 42, 42);
+}
+
+.linkedIn:hover {
+  fill: rgb(43, 126, 209);
+}
+
+.ig:hover {
+  fill: rgb(193, 53, 132);
+}
+
+.fb:hover {
+  fill: rgb(58, 139, 244);
 }
 
 .socials:hover svg {
