@@ -1,18 +1,32 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./Nav.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
+import { Player } from "@lottiefiles/react-lottie-player";
 import logo from "../assets/logo.png";
 
 function Nav() {
   const [lottie, setLottie] = useState(null);
   const [theme, setTheme] = useState(true);
+  const [menuOpened, setMenuOpened] = useState(false);
   const [segment, setSegment] = useState([0, 30]);
-  const lottieRef = (lottie) => setLottie(lottie);
-  const play = () => {
+
+  const switchRef = (lottie) => setLottie(lottie);
+  const menuRef = useRef(null);
+
+  const playSwitch = () => {
     if (!lottie) return;
     lottie.play();
     setTheme((prev) => !prev);
     theme ? setSegment([0, 30]) : setSegment([30, 60]);
+  };
+  const playMenu = () => {
+    if (!menuRef.current) return;
+    menuOpened
+      ? menuRef.current.setPlayerDirection(-1)
+      : menuRef.current.setPlayerDirection(1);
+    setMenuOpened((prev) => !prev);
+    menuRef.current.setPlayerSpeed(4);
+    menuRef.current.play();
   };
 
   return (
@@ -27,21 +41,22 @@ function Nav() {
           <button>Services</button>
           <button>Contact</button>
         </section>
-        <button onClick={play} className={styles.switch}>
+        <button onClick={playSwitch} className={styles.switch}>
           <Lot
             segment={segment}
             speed={2}
-            dotLottieRefCallback={lottieRef}
+            dotLottieRefCallback={switchRef}
             src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.json"
             style={{ width: "50px", height: "30px" }}
           ></Lot>
         </button>
-        <button className={styles.menu}>
-          <Lot
-            speed={2}
+        <button onClick={playMenu} className={styles.menu}>
+          <Player
+            ref={menuRef}
+            keepLastFrame={true}
             src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/menu.json"
             style={{ width: "50px", height: "43px" }}
-          ></Lot>
+          ></Player>
         </button>
       </section>
     </section>
