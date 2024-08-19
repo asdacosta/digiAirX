@@ -33,7 +33,7 @@ function Home() {
         "We specialize in <span style='color: #0077b6; font-weight: 600;'>Marketing</span>.",
         "We specialize in <span style='color: #0077b6; font-weight: 600;'>Graphic Design</span>.",
         // "We specialize in building <span style='color: #0077b6; font-weight: 600;'>Chat Bots and AI solutions</span>.",
-        "Need digital services?^1000 <span style='color: #0077b6; font-weight: 600;'>Search Engine Optimization</span>...",
+        "Need digital services?^1000 <span style='color: #0077b6; font-weight: 600;'>SEO</span>...",
         "Need digital services? <span style='color: #0077b6; font-weight: 600;'>Brand Design</span>...",
         // "Need digital services? <span style='color: #0077b6; font-weight: 600;'>Video Production</span>...",
         // "Need digital services? <span style='color: #0077b6; font-weight: 600;'>Social Media Management</span>...",
