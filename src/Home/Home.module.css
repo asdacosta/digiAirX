@@ -29,7 +29,6 @@
 .intro img {
   width: 5rem;
   transform: translateY(-0.5rem);
-  border-radius: 1rem;
 }
 
 h1 {
@@ -134,15 +133,15 @@ h1 {
 
 .socials svg {
   width: 1.7rem;
-  fill: #03045e;
+  fill: #0077b6;
   cursor: pointer;
   filter: blur(5rem);
   transition: all 0.25s ease-in-out, filter 0.5s ease-in-out;
 }
 
 .socials svg:hover {
-  fill: #0077b6;
   scale: 1.1;
+  fill: #03045e;
 }
 
 .socials:hover svg {
