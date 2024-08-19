@@ -1,14 +1,16 @@
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { ThemeContext } from "./App";
 
 const Background = () => {
   const [init, setInit] = useState(false);
   const [color, setColor] = useState({
     light: "#ffffff",
-    black: "#000000",
+    dark: "#000000",
     fixed: "#0077b6",
   });
+  const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -21,7 +23,7 @@ const Background = () => {
   const options = useMemo(
     () => ({
       background: {
-        color: { value: color.light },
+        color: { value: color[theme] },
       },
       fpsLimit: 120,
       interactivity: {
@@ -74,11 +76,11 @@ const Background = () => {
             area: {
               gradient: {
                 start: { value: color.fixed },
-                stop: { value: color.light },
+                stop: { value: color[theme] },
                 radius: 1000,
               },
             },
-            shadow: { color: { value: color.light }, length: 2000 },
+            shadow: { color: { value: color[theme] }, length: 2000 },
           },
         },
       },
@@ -194,7 +196,7 @@ const Background = () => {
       },
       detectRetina: true,
     }),
-    []
+    [theme]
   );
 
   if (init) {
