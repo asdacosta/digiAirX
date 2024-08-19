@@ -266,6 +266,7 @@ function Contact() {
               <select
                 name="country"
                 id="country"
+                defaultValue=""
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
@@ -279,12 +280,13 @@ function Contact() {
               <select
                 name="industry"
                 id="industry"
+                defaultValue=""
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
               >
-                <option value="" disabled selected></option>
+                <option value="" disabled></option>
                 <option value="technology">Technology</option>
                 <option value="healthcare">Healthcare</option>
                 <option value="finance">Finance</option>
@@ -375,12 +377,13 @@ function Contact() {
               <select
                 name="us"
                 id="us"
+                defaultValue=""
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
                 onChange={triggerNonEmpty}
               >
-                <option value="" disabled selected></option>
+                <option value="" disabled></option>
                 <option value="referral">Referral</option>
                 <option value="search">Online Search</option>
                 <option value="social media">Social Media</option>
