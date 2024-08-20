@@ -303,8 +303,8 @@ function Services() {
             Graphic design involves creating visual content to communicate
             messages effectively. It involves the use of typography, imagery,
             color, and layout to produce designs that captivate and engage
-            audiences. Examples include logos, social media graphics, and
-            advertising materials.
+            audiences. Examples include logos, business cards, social media
+            graphics, and advertising materials.
           </p>
           <p>
             At Digiairx, graphic design is a fundamental part of our services,
