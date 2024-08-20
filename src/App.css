@@ -44,3 +44,25 @@ body[data-theme="dark"] #root {
   color: rgb(220, 220, 220);
   font-weight: 400;
 }
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #03055e31;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0077b6;
+  border-radius: 2rem;
+  border: 0.2rem solid #cdcedf;
+}
+
+body[data-theme="dark"]::-webkit-scrollbar-track {
+  background: #010112;
+}
+
+body[data-theme="dark"]::-webkit-scrollbar-thumb {
+  border: 0.2rem solid #010112;
+}
