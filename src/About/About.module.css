@@ -84,6 +84,43 @@
   fill: #023e8a;
 }
 
+.questionCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.questionCards > section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faqs div {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #023e8a;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.faqs p {
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.chevron {
+  fill: white;
+  width: 0.6rem;
+}
+
+.chevron.drop {
+  transform: rotate(90deg);
+}
+
 @media (max-width: 650px) {
   .about {
     padding: 4rem 0.5rem 3rem 0.5rem;
