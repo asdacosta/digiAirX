@@ -39,8 +39,7 @@ function Nav() {
   };
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark" && lottie) {
+    if (theme === "dark" && lottie) {
       setTimeout(() => {
         lottie.play();
       }, 100);
