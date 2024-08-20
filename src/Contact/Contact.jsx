@@ -185,6 +185,7 @@ function Contact() {
       </section>
       <section className={styles.fieldsBox}>
         <form
+          autoComplete="off"
           className={`
             ${styles.fields} 
           ${focusedInput && styles[focusedInput]} 
@@ -212,6 +213,7 @@ function Contact() {
                 type="text"
                 name="name"
                 id="name"
+                autoComplete="new-name"
                 onFocus={triggerFocus}
                 onBlur={handleNameBlur}
                 onInput={triggerNonEmpty}
@@ -226,6 +228,7 @@ function Contact() {
                 type="email"
                 name="email"
                 id="email"
+                autoComplete="new-email"
                 onFocus={triggerFocus}
                 onBlur={handleEmailBlur}
                 onInput={triggerNonEmpty}
@@ -240,6 +243,7 @@ function Contact() {
                 type="tel"
                 name="tel"
                 id="tel"
+                autoComplete="new-tel"
                 onFocus={triggerFocus}
                 onBlur={handleTelBlur}
                 onInput={triggerNonEmpty}
@@ -255,6 +259,7 @@ function Contact() {
                 type="text"
                 name="bus"
                 id="bus"
+                autoComplete="new-bus"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
@@ -267,6 +272,7 @@ function Contact() {
                 name="country"
                 id="country"
                 defaultValue=""
+                autoComplete="new-country"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
@@ -281,6 +287,7 @@ function Contact() {
                 name="industry"
                 id="industry"
                 defaultValue=""
+                autoComplete="new-industry"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
@@ -378,6 +385,7 @@ function Contact() {
                 name="us"
                 id="us"
                 defaultValue=""
+                autoComplete="new-us"
                 onFocus={triggerFocus}
                 onBlur={triggerBlur}
                 onInput={triggerNonEmpty}
@@ -402,6 +410,7 @@ function Contact() {
                 id="message"
                 cols="20"
                 rows="10"
+                autoComplete="new-message"
                 maxLength="3000"
                 onFocus={triggerFocus}
                 onBlur={handleMessageBlur}
