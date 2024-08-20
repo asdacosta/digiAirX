@@ -15,10 +15,20 @@ export const ThemeContext = createContext({
 function App() {
   const [stopLoad, setStopLoad] = useState(false);
   const [theme, setTheme] = useState("light");
+  const [extractedTheme, setExtractedTheme] = useState(false);
   const endLoadOnComplete = () => setStopLoad(true);
 
   useEffect(() => {
+    if (!extractedTheme) {
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme) document.body.setAttribute("data-theme", storedTheme);
+      setExtractedTheme(true);
+      setTheme(storedTheme);
+      return;
+    }
+
     document.body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
