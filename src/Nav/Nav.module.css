@@ -55,6 +55,16 @@
   display: none;
 }
 
+.active button {
+  font-weight: 550;
+  color: #03045e;
+  cursor: context-menu;
+}
+
+.active button::after {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .menu {
     display: block;
