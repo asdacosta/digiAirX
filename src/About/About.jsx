@@ -1,5 +1,5 @@
 import styles from "./About.module.css";
-import { faqs } from "./faqs";
+import { faqs } from "./FAQs";
 import { QuestionCard } from "./QuestionCard";
 
 function About() {
