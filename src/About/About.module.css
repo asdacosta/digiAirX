@@ -126,6 +126,11 @@
   transform: rotate(90deg);
 }
 
+.faqLink {
+  color: #0077b6;
+  cursor: pointer;
+}
+
 @media (max-width: 650px) {
   .about {
     padding: 4rem 0.5rem 3rem 0.5rem;
