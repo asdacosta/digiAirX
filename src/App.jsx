@@ -18,7 +18,7 @@ function App() {
   const [extractedTheme, setExtractedTheme] = useState(false);
   const endLoadOnComplete = () => setStopLoad(true);
 
-  useEffect(() => {
+  const extractAndSetTheme = () => {
     if (!extractedTheme) {
       const storedTheme = localStorage.getItem("theme");
       if (storedTheme) document.body.setAttribute("data-theme", storedTheme);
@@ -26,10 +26,10 @@ function App() {
       setTheme(storedTheme);
       return;
     }
-
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-  }, [theme]);
+  };
+  useEffect(extractAndSetTheme, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
