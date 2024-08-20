@@ -28,9 +28,9 @@ body {
 }
 
 .typed-cursor {
-  font-size: 3rem;
+  font-size: 2.5rem;
   position: relative;
-  bottom: -0.2rem;
+  bottom: -0.1rem;
 }
 
 button,
