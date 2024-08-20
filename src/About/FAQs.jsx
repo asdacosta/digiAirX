@@ -140,7 +140,7 @@ const faqs = [
   },
   {
     key: "faq19",
-    question: "Do you offer training for using your complex services?",
+    question: "Do you offer training for using your services?",
     answer:
       "Yes, we offer training sessions and documentation for complex services to help you understand and use them effectively.",
   },
