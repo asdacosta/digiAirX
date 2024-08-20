@@ -99,12 +99,17 @@
 .faqs div {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   color: white;
   background-color: #023e8a;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   width: 100%;
   cursor: pointer;
+}
+
+.faqs h3 {
+  text-align: left;
 }
 
 .faqs p {
