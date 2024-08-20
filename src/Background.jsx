@@ -64,12 +64,12 @@ const Background = () => {
           bubble: {
             distance: 400,
             duration: 2,
-            opacity: 0.5,
+            opacity: 0.6,
             size: 40,
             divs: { distance: 200, duration: 0.4 },
           },
-          connect: { distance: 80, links: { opacity: 0.1 }, radius: 60 },
-          grab: { distance: 400, links: { opacity: 0.5 } },
+          connect: { distance: 80, links: { opacity: 0.2 }, radius: 60 },
+          grab: { distance: 400, links: { opacity: 0.6 } },
           remove: { quantity: 2 },
           slow: { factor: 3, radius: 200 },
           light: {
@@ -125,7 +125,7 @@ const Background = () => {
           value: 100,
         },
         opacity: {
-          value: { min: 0.1, max: 0.4 },
+          value: { min: 0.2, max: 0.6 },
           animation: {
             enable: true,
             count: 0,
@@ -170,7 +170,7 @@ const Background = () => {
             rate: { value: { min: 4, max: 9 }, sizeOffset: true },
           },
         },
-        orbit: { rotation: { value: 45 }, width: 1, opacity: 0.5 },
+        orbit: { rotation: { value: 45 }, width: 1, opacity: 0.6 },
         rotate: { value: 0, direction: "clockwise" },
         life: { count: 0 },
         wobble: {
@@ -182,7 +182,7 @@ const Background = () => {
           distance: 150,
           enable: true,
           frequency: 1,
-          opacity: 0.4,
+          opacity: 0.5,
           shadow: { blur: 5, color: { value: "#000" } },
           triangles: { frequency: 1 },
           width: 1,
