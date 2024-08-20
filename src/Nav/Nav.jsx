@@ -5,6 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import logo from "../assets/logo.png";
 import darkLogo from "../assets/logo-dark.png";
 import { ThemeContext } from "../App";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   const [lottie, setLottie] = useState(null);
@@ -53,10 +54,30 @@ function Nav() {
       </section>
       <section className={styles.right}>
         <section className={styles.links}>
-          <button>Home</button>
-          <button>About</button>
-          <button>Services</button>
-          <button>Contact</button>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            <button>Home</button>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            <button>About</button>
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            <button>Services</button>
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            <button>Contact</button>
+          </NavLink>
         </section>
         <button onClick={playSwitch} className={styles.switch}>
           <Lot
