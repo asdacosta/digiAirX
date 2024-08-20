@@ -159,6 +159,34 @@ h1 {
   fill: rgb(58, 139, 244);
 }
 
+svg.tiktok {
+  width: 2rem;
+}
+
+.tiktok:hover {
+  fill: rgb(44, 42, 42);
+}
+/* 
+.snapchat:hover {
+  fill: yellow;
+}
+
+.whatsapp:hover {
+  fill: rgb(18, 140, 126);
+}
+
+.telegram:hover {
+  fill: rgb(29, 161, 242);
+}
+
+.tube:hover {
+  fill: rgb(253, 25, 25);
+}
+
+.pinterest:hover {
+  fill: rgb(234, 62, 88);
+} */
+
 .socials:hover svg {
   filter: blur(0);
 }
