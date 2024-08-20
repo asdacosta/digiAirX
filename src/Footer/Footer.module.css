@@ -150,6 +150,16 @@
   top: -0.5rem;
 }
 
+.active button {
+  font-weight: 550;
+  color: #03045e;
+  cursor: context-menu;
+}
+
+.active button::after {
+  display: none;
+}
+
 @media (max-width: 650px) {
   .footer {
     padding: 2rem 0.5rem;
