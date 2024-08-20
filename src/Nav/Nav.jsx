@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./Nav.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -12,7 +12,7 @@ function Nav() {
   const [segment, setSegment] = useState([0, 30]);
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const switchRef = (lottie) => setLottie(lottie);
+  const switchRefCallback = (lottie) => setLottie(lottie);
   const menuRef = useRef(null);
 
   const playSwitch = () => {
@@ -38,6 +38,15 @@ function Nav() {
     menuRef.current.play();
   };
 
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark" && lottie) {
+      setTimeout(() => {
+        lottie.play();
+      }, 100);
+    }
+  }, [lottie]);
+
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
@@ -53,8 +62,8 @@ function Nav() {
         <button onClick={playSwitch} className={styles.switch}>
           <Lot
             segment={segment}
-            speed={2}
-            dotLottieRefCallback={switchRef}
+            speed={5}
+            dotLottieRefCallback={switchRefCallback}
             src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.json"
             style={{ width: "50px", height: "30px" }}
           ></Lot>
