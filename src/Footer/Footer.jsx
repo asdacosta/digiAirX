@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 import logo from "../assets/logo-blue.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -16,7 +16,9 @@ function Footer() {
               Professional digital services delivered by an experienced team of
               experts.
             </p>
-            <button className={styles.startButton}>Get started</button>
+            <Link to="/contact">
+              <button className={styles.startButton}>Get started</button>
+            </Link>
           </section>
           <section className={styles.socials}>
             <div>
@@ -71,8 +73,12 @@ function Footer() {
           </section>
           <section className={styles.support}>
             <h4>Support</h4>
-            <button>Have a question?</button>
-            <button>FAQ</button>
+            <Link to="/contact">
+              <button>Have a question?</button>
+            </Link>
+            <Link to="/about">
+              <button>FAQs</button>
+            </Link>
           </section>
         </section>
       </section>
