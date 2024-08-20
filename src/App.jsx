@@ -12,15 +12,9 @@ export const ThemeContext = createContext({
   setTheme: () => {},
 });
 
-export const MenuContext = createContext({
-  page: "",
-  setPage: () => {},
-});
-
 function App() {
   const [stopLoad, setStopLoad] = useState(false);
   const [theme, setTheme] = useState("light");
-  const [page, setPage] = useState("");
   const [extractedTheme, setExtractedTheme] = useState(false);
   const endLoadOnComplete = () => setStopLoad(true);
 
@@ -42,12 +36,12 @@ function App() {
       {!stopLoad ? (
         <Load endOnComplete={endLoadOnComplete} />
       ) : (
-        <MenuContext.Provider value={{ page, setPage }}>
+        <>
           <Background />
           <Nav />
           <Outlet />
           <Footer />
-        </MenuContext.Provider>
+        </>
       )}
     </ThemeContext.Provider>
   );
