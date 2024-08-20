@@ -1,9 +1,11 @@
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 import styles from "./Load.module.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../App";
 
 function Load({ endOnComplete }) {
   const [lottie, setLottie] = useState(null);
+  const { theme, setTheme } = useContext(ThemeContext);
   const lottieRefCall = (lottie) => setLottie(lottie);
 
   const endAndClearOnComplete = () => {
@@ -14,7 +16,10 @@ function Load({ endOnComplete }) {
   useEffect(endAndClearOnComplete, [lottie]);
 
   return (
-    <section className={styles.load}>
+    <section
+      className={styles.load}
+      style={theme === "dark" ? { backgroundColor: "black" } : {}}
+    >
       <Lot
         autoplay
         dotLottieRefCallback={lottieRefCall}
