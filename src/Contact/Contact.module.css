@@ -476,3 +476,9 @@ body[data-theme="dark"] .lastFields > div:first-child::before,
 body[data-theme="dark"] .thirdFields > div {
   color: rgba(255, 255, 255, 0.4);
 }
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea {
+  background-color: rgba(255, 255, 255, 0.8);
+}
