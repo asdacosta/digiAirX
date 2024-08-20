@@ -1,5 +1,6 @@
 import styles from "./Footer.module.css";
 import logo from "../assets/logo-blue.png";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -43,10 +44,30 @@ function Footer() {
         <section className={styles.directLinks}>
           <section className={styles.quickLinks}>
             <h4>Quick Links</h4>
-            <button>Home</button>
-            <button>About</button>
-            <button>Services</button>
-            <button>Contact</button>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              <button>Home</button>
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              <button>About</button>
+            </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              <button>Services</button>
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              <button>Contact</button>
+            </NavLink>
           </section>
           <section className={styles.support}>
             <h4>Support</h4>
