@@ -258,7 +258,7 @@
 .fields.graphic .thirdFields::before,
 .fields.brand .thirdFields::before,
 .fields.suite .thirdFields::before {
-  color: transparent;
+  color: transparent !important;
 }
 
 .submitButton {
@@ -441,4 +441,38 @@
   .fields {
     width: 15rem;
   }
+}
+
+body[data-theme="dark"] .firstFields label,
+body[data-theme="dark"] .secFields label,
+body[data-theme="dark"] .lastFields label {
+  color: rgba(0, 0, 0, 0.9);
+
+  font-weight: 400;
+}
+
+body[data-theme="dark"] .fields.name .nameBox > label,
+body[data-theme="dark"] .fields.email .emailBox > label,
+body[data-theme="dark"] .fields.tel .telBox > label,
+body[data-theme="dark"] .fields.bus .busBox > label,
+body[data-theme="dark"] .fields.country .countryBox > label,
+body[data-theme="dark"] .fields.industry .industryBox > label,
+body[data-theme="dark"] .fields.us .usBox > label,
+body[data-theme="dark"] .fields.message .messageBox > label,
+body[data-theme="dark"] .thirdFields h3 {
+  color: #0077b6;
+  font-weight: 500;
+}
+
+body[data-theme="dark"] .firstFields > div::before,
+body[data-theme="dark"] .lastFields > div::before,
+body[data-theme="dark"] .thirdFields::before {
+  color: #0077b6;
+}
+
+body[data-theme="dark"] .secFields > div::before,
+body[data-theme="dark"] .firstFields > div:last-child::before,
+body[data-theme="dark"] .lastFields > div:first-child::before,
+body[data-theme="dark"] .thirdFields > div {
+  color: rgba(255, 255, 255, 0.4);
 }
