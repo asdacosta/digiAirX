@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
 import styles from "./Services.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
+import { useRef } from "react";
 
 function Services() {
+  const websiteRef = useRef(null);
+  const webappRef = useRef(null);
+  const uiuxRef = useRef(null);
+  const seoRef = useRef(null);
+  const marketingRef = useRef(null);
+  const designRef = useRef(null);
+  const brandingRef = useRef(null);
+  const suiteRef = useRef(null);
+
+  const scrollTo = (ref) => {
+    if (!ref.current) return;
+    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section className={styles.services}>
       <section className={styles.intro}>
@@ -18,7 +33,7 @@ function Services() {
         </p>
       </section>
       <section className={styles.cards}>
-        <section>
+        <section onClick={() => scrollTo(websiteRef)}>
           <div>
             <Lot
               autoplay
@@ -30,7 +45,7 @@ function Services() {
           </div>
           <span>Website Development</span>
         </section>
-        <section>
+        <section onClick={() => scrollTo(webappRef)}>
           <div>
             <Lot
               autoplay
@@ -42,7 +57,7 @@ function Services() {
           </div>
           <span>Web App Development</span>
         </section>
-        <section>
+        <section onClick={() => scrollTo(uiuxRef)}>
           <div>
             <Lot
               autoplay
@@ -54,7 +69,7 @@ function Services() {
           </div>
           <span>UI/UX Design</span>
         </section>
-        <section>
+        <section onClick={() => scrollTo(seoRef)}>
           <div>
             <Lot
               autoplay
@@ -66,7 +81,7 @@ function Services() {
           </div>
           <span>SEO</span>
         </section>
-        <section>
+        <section onClick={() => scrollTo(marketingRef)}>
           <div>
             <Lot
               autoplay
@@ -78,7 +93,7 @@ function Services() {
           </div>
           <span>Marketing</span>
         </section>
-        <section>
+        <section onClick={() => scrollTo(designRef)}>
           <div>
             <Lot
               autoplay
@@ -90,7 +105,7 @@ function Services() {
           </div>
           <span>Graphic Design</span>
         </section>
-        <section>
+        <section onClick={() => scrollTo(brandingRef)}>
           <div>
             <Lot
               autoplay
@@ -102,7 +117,7 @@ function Services() {
           </div>
           <span>Brand Design</span>
         </section>
-        <section>
+        <section onClick={() => scrollTo(suiteRef)}>
           <div>
             <Lot
               autoplay
@@ -116,7 +131,7 @@ function Services() {
         </section>
       </section>
       <section className={styles.descriptions}>
-        <section className={styles.websiteBox}>
+        <section ref={websiteRef} className={styles.websiteBox}>
           <h2>Website Development</h2>
           <p>
             A website is a set of web pages designed to provide information
@@ -161,7 +176,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section className={styles.webappBox}>
+        <section ref={webappRef} className={styles.webappBox}>
           <h2>Web App Development</h2>
           <p>
             A web application is a type of website designed to perform complex
@@ -202,7 +217,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section className={styles.uiBox}>
+        <section ref={uiuxRef} className={styles.uiBox}>
           <h2>UI/UX Design</h2>
           <p>
             User interface (UI) and user experience (UX) design focus on
@@ -236,7 +251,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section className={styles.seoBox}>
+        <section ref={seoRef} className={styles.seoBox}>
           <h2>Search Engine Optimization</h2>
           <p>
             Search Engine Optimization (SEO) involves enhancing your website’s
@@ -273,7 +288,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section className={styles.marketingBox}>
+        <section ref={marketingRef} className={styles.marketingBox}>
           <h2>Marketing</h2>
           <p>
             Digital marketing involves promoting your business through online
@@ -308,7 +323,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section className={styles.designBox}>
+        <section ref={designRef} className={styles.designBox}>
           <h2>Graphic Design</h2>
           <p>
             Graphic design involves creating visual content to communicate
@@ -348,7 +363,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section className={styles.brandingBox}>
+        <section ref={brandingRef} className={styles.brandingBox}>
           <h2>Brand Design</h2>
           <p>
             Brand design involves creating a visual identity that represents
@@ -380,7 +395,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section className={styles.suiteBox}>
+        <section ref={suiteRef} className={styles.suiteBox}>
           <h2>Suite</h2>
           <p>
             Suite offers a blend of our core digital services, providing an
