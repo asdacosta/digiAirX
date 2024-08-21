@@ -71,11 +71,76 @@
   }
 
   .right {
+    position: relative;
     background-color: transparent;
   }
 
   .links {
-    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background: linear-gradient(120deg, #0077b6 30%, #03045e);
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    width: 0;
+    height: 0;
+    padding: 0.5rem 0.3rem 0.5rem 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: width 0.2s linear, height 0.2s 0.2s linear, opacity 0.4s linear;
+  }
+
+  .links.close {
+    opacity: 0;
+    pointer-events: auto;
+    width: 0;
+    height: 0;
+    transition: width 0.15s 0.2s linear, height 0.2s linear, opacity 0.4s linear;
+  }
+
+  .links.open {
+    opacity: 1;
+    pointer-events: auto;
+    width: 6.2rem;
+    height: 8rem;
+  }
+
+  .links button {
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform 0.2s ease-in-out, opacity 0.2s 0.2s;
+  }
+
+  .links.open button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .links.close button {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      opacity 0s 0s;
+  }
+
+  button.home {
+    transition-delay: 0.2s;
+  }
+
+  button.about {
+    transition-delay: 0.3s;
+  }
+
+  button.services {
+    transition-delay: 0.4s;
+  }
+
+  button.contact {
+    transition-delay: 0.5s;
   }
 
   .logoBox img {
