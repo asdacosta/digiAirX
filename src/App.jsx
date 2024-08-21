@@ -5,7 +5,7 @@ import { Background } from "./Background";
 import { Nav } from "./Nav/Nav";
 import { Load } from "./Load/Load";
 import { Footer } from "./Footer/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 export const ThemeContext = createContext({
   theme: "",
@@ -17,6 +17,14 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [extractedTheme, setExtractedTheme] = useState(false);
   const endLoadOnComplete = () => setStopLoad(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (!hash) return;
+    const element = document.getElementById(hash.replace("#", ""));
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  }, [location]);
 
   const extractAndSetTheme = () => {
     if (!extractedTheme) {
