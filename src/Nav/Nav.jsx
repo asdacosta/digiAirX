@@ -39,14 +39,6 @@ function Nav() {
     menuRef.current.play();
   };
 
-  useEffect(() => {
-    if (theme === "dark" && lottie) {
-      setTimeout(() => {
-        lottie.play();
-      }, 100);
-    }
-  }, [lottie]);
-
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
@@ -81,6 +73,7 @@ function Nav() {
         </section>
         <button onClick={playSwitch} className={styles.switch}>
           <Lot
+            autoplay={theme === "dark"}
             segment={segment}
             speed={5}
             dotLottieRefCallback={switchRefCallback}
