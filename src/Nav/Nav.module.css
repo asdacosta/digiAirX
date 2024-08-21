@@ -66,6 +66,10 @@
 }
 
 @media (max-width: 700px) {
+  .nav {
+    padding: 0.5rem;
+  }
+
   .menu {
     display: block;
   }
@@ -85,11 +89,11 @@
     background: linear-gradient(120deg, #0077b6 40%, #03045e);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0% 100%);
     position: absolute;
-    right: 0.6rem;
+    right: 0.7rem;
     top: 3rem;
     width: 0;
     height: 0;
-    padding: 0.4rem;
+    padding: 0.5rem 0.2rem 0.5rem 0.5rem;
     opacity: 0;
     pointer-events: none;
     overflow: visible;
