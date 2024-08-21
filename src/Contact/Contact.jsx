@@ -160,7 +160,7 @@ function Contact() {
   };
 
   return (
-    <section className={styles.contact}>
+    <section id="contactHead" className={styles.contact}>
       <section className={styles.headerBox}>
         <h2>
           W
