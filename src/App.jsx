@@ -25,7 +25,7 @@ function App() {
     if (!hash) return;
     const element = document.getElementById(hash.replace("#", ""));
     if (element) element.scrollIntoView({ behavior: "smooth" });
-  }, [location]);
+  }, [location.hash]);
 
   const extractAndSetTheme = () => {
     if (!extractedTheme) {
