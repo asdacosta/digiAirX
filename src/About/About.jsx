@@ -24,8 +24,8 @@ function About() {
       <section>
         <h2>Objective</h2>
         <p>
-          Our goal is simple; to deliver the best services that ensure client
-          satisfaction.
+          Our goal is straightforward; to deliver the best competitive services
+          that ensure client satisfaction.
         </p>
       </section>
       <section>
