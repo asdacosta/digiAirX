@@ -5,7 +5,7 @@ import { QuestionCard } from "./QuestionCard";
 
 function About() {
   return (
-    <section className={styles.about}>
+    <section id="aboutHead" className={styles.about}>
       <section>
         <h2>Discover Us</h2>
         <section className={styles.card}>
