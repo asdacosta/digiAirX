@@ -117,7 +117,7 @@ function About() {
           </p>
         </section>
       </section>
-      <section className={styles.faqs}>
+      <section className={styles.faqs} id="faqs">
         <h2>FAQs</h2>
         <section className={styles.questionCards}>
           {faqs.map((card) => (
