@@ -9,7 +9,7 @@ const faqs = [
       <>
         To get started, simply reach out to us through our contact form or phone
         at{" "}
-        <Link to="/contact">
+        <Link to="/contact#contactHead">
           <strong className={styles.faqLink}>Contact</strong>
         </Link>
         . We'll respond within 24 hours to understand your needs and recommend
@@ -23,7 +23,7 @@ const faqs = [
     answer: (
       <>
         We work with all industries! Explore our Industry field at{" "}
-        <Link to="/contact">
+        <Link to="/contact#contactHead">
           <strong className={styles.faqLink}>Contact</strong>
         </Link>{" "}
         to see the full list.
@@ -84,12 +84,12 @@ const faqs = [
     answer: (
       <>
         We offer service packages through our{" "}
-        <Link to="/services">
+        <Link to="/services#suiteHead">
           <strong className={styles.faqLink}>Suite</strong>{" "}
         </Link>
         service, and custom solutions tailored to the specific needs and budget
         of your business.{" "}
-        <Link to="/contact">
+        <Link to="/contact#contactHead">
           <strong className={styles.faqLink}>Reach out</strong>
         </Link>{" "}
         so we can recommend the best option for you.
