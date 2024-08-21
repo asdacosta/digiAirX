@@ -94,6 +94,7 @@ h1 {
   flex-direction: column;
   gap: 3rem;
   align-items: center;
+  position: relative;
 }
 
 .socials {
@@ -129,6 +130,13 @@ h1 {
 
 .socials:hover::before {
   left: -100%;
+}
+
+.socialName {
+  font-size: 1.2rem;
+  font-family: "Lobster Two", sans-serif;
+  position: absolute;
+  bottom: -1.5rem;
 }
 
 .socials svg {
