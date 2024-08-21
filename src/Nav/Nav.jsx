@@ -45,30 +45,34 @@ function Nav() {
         <img src={theme === "light" ? logo : darkLogo} alt="Digiairx logo" />
       </section>
       <section className={styles.right}>
-        <section className={styles.links}>
+        <section
+          className={`${menuOpened ? styles.open : styles.close} ${
+            styles.links
+          }`}
+        >
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            <button>Home</button>
+            <button className={styles.home}>Home</button>
           </NavLink>
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            <button>About</button>
+            <button className={styles.about}>About</button>
           </NavLink>
           <NavLink
             to="/services"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            <button>Services</button>
+            <button className={styles.services}>Services</button>
           </NavLink>
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            <button>Contact</button>
+            <button className={styles.contact}>Contact</button>
           </NavLink>
         </section>
         <button onClick={playSwitch} className={styles.switch}>
