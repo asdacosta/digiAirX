@@ -19,7 +19,7 @@ function Services() {
   };
 
   return (
-    <section className={styles.services}>
+    <section id="servicesHead" className={styles.services}>
       <section className={styles.intro}>
         <p>
           At DigiAirX, we deliver digital services tailored to your unique
