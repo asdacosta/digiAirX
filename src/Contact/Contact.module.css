@@ -307,11 +307,12 @@
 }
 
 .swiftCard {
+  align-self: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   background-color: #03045e;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   transition: transform 0.2s ease-in-out;
 }
