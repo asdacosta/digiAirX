@@ -14,8 +14,8 @@ function Services() {
   const suiteRef = useRef(null);
 
   const scrollTo = (ref) => {
-    if (!ref.current) return;
-    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    const target = ref.current;
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
