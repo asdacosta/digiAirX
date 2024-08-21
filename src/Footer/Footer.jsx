@@ -16,7 +16,7 @@ function Footer() {
               Professional digital services delivered by an experienced team of
               experts.
             </p>
-            <Link to="/contact#contactHead">
+            <Link to="/contact">
               <button className={styles.startButton}>Get started</button>
             </Link>
           </section>
@@ -89,25 +89,25 @@ function Footer() {
           <section className={styles.quickLinks}>
             <h4>Quick Links</h4>
             <NavLink
-              to="/#homeHead"
+              to="/"
               className={({ isActive }) => (isActive ? styles.active : "")}
             >
               <button>Home</button>
             </NavLink>
             <NavLink
-              to="/about#aboutHead"
+              to="/about"
               className={({ isActive }) => (isActive ? styles.active : "")}
             >
               <button>About</button>
             </NavLink>
             <NavLink
-              to="/services#servicesHead"
+              to="/services"
               className={({ isActive }) => (isActive ? styles.active : "")}
             >
               <button>Services</button>
             </NavLink>
             <NavLink
-              to="/contact#contactHead"
+              to="/contact"
               className={({ isActive }) => (isActive ? styles.active : "")}
             >
               <button>Contact</button>
@@ -115,7 +115,7 @@ function Footer() {
           </section>
           <section className={styles.support}>
             <h4>Support</h4>
-            <Link to="/contact#contactHead">
+            <Link to="/contact">
               <button>Have a question?</button>
             </Link>
             <Link to="/about#faqs">
