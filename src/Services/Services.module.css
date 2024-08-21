@@ -29,7 +29,7 @@
   grid-template: repeat(2, 1fr) / repeat(auto-fit, 18rem);
 }
 
-.cards > section {
+.card {
   display: flex;
   flex-direction: column;
   background: linear-gradient(
@@ -43,11 +43,11 @@
   cursor: pointer;
 }
 
-.cards > section:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
-.cards span {
+.card span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +139,7 @@
   }
 }
 
-body[data-theme="dark"] .cards > section {
+body[data-theme="dark"] .card {
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0.2) 85%,
@@ -147,7 +147,7 @@ body[data-theme="dark"] .cards > section {
   );
 }
 
-body[data-theme="dark"] .cards span {
+body[data-theme="dark"] .card span {
   border-top: 0.1rem solid rgb(167, 167, 167);
   color: white;
 }
