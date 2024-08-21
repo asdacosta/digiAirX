@@ -176,7 +176,7 @@ function Contact() {
               loop
               speed={0.7}
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/247.json"
-              style={{ width: "8rem", height: "8rem" }}
+              style={{ width: "7rem", height: "7rem" }}
             ></Lot>
           </div>
           <span>
