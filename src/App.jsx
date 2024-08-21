@@ -6,6 +6,7 @@ import { Nav } from "./Nav/Nav";
 import { Load } from "./Load/Load";
 import { Footer } from "./Footer/Footer";
 import { Outlet, useLocation } from "react-router-dom";
+import { ScrollToTop } from "./ScrollTo/ScrollToTop";
 
 export const ThemeContext = createContext({
   theme: "",
@@ -47,6 +48,7 @@ function App() {
         <>
           <Background />
           <Nav />
+          <ScrollToTop />
           <Outlet />
           <Footer />
         </>
