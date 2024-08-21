@@ -395,7 +395,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section id="suiteHead" ref={suiteRef} className={styles.suiteBox}>
+        <section id="suite" ref={suiteRef} className={styles.suiteBox}>
           <h2>Suite</h2>
           <p>
             Suite offers a blend of our core digital services, providing an
