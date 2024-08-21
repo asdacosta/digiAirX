@@ -160,7 +160,7 @@ function Contact() {
   };
 
   return (
-    <section id="contactHead" className={styles.contact}>
+    <section className={styles.contact}>
       <section className={styles.headerBox}>
         <h2>
           W
@@ -434,7 +434,7 @@ function Contact() {
         </form>
       </section>
       <section className={styles.swiftContact}>
-        <h2>Reach out via Different Medium</h2>
+        <p>To connect via different medium:</p>
         <section className={styles.swiftCard}>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
