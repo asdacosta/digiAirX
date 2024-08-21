@@ -82,10 +82,10 @@ function Footer() {
           </section>
           <section className={styles.support}>
             <h4>Support</h4>
-            <Link to="/contact">
+            <Link to="/contact#contactHead">
               <button>Have a question?</button>
             </Link>
-            <Link to="/about">
+            <Link to="/about#faqs">
               <button>FAQs</button>
             </Link>
           </section>
