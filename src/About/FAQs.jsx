@@ -7,8 +7,7 @@ const faqs = [
     question: "How do I get started?",
     answer: (
       <>
-        To get started, simply reach out to us through our contact form or phone
-        at{" "}
+        Reach out to us through our contact form or phone at{" "}
         <Link to="/contact">
           <strong className={styles.faqLink}>Contact</strong>
         </Link>
@@ -23,7 +22,7 @@ const faqs = [
     answer: (
       <>
         We work with all industries! Explore our Industry field at{" "}
-        <Link to="/contact">
+        <Link to="/contact#industry">
           <strong className={styles.faqLink}>Contact</strong>
         </Link>{" "}
         to see the full list.
@@ -34,7 +33,7 @@ const faqs = [
     key: "faq3",
     question: "What makes your company different from others?",
     answer:
-      "We stand out with our dedicated team of experienced experts who deliver professional, modern, and swift services that are unique to your business, ensuring you gain a competitive edge in your industry.",
+      "We stand out with our experienced team of  experts who deliver professional, modern, and swift services that are unique to your business, ensuring you gain a competitive edge in your industry.",
   },
   {
     key: "faq4",
