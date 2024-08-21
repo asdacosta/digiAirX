@@ -1,23 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./Services.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
-import { useRef } from "react";
 
 function Services() {
-  const websiteRef = useRef(null);
-  const webappRef = useRef(null);
-  const uiuxRef = useRef(null);
-  const seoRef = useRef(null);
-  const marketingRef = useRef(null);
-  const designRef = useRef(null);
-  const brandingRef = useRef(null);
-  const suiteRef = useRef(null);
-
-  const scrollTo = (ref) => {
-    const target = ref.current;
-    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <section id="servicesHead" className={styles.services}>
       <section className={styles.intro}>
@@ -33,105 +18,121 @@ function Services() {
         </p>
       </section>
       <section className={styles.cards}>
-        <section onClick={() => scrollTo(websiteRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.7}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/website.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>Website Development</span>
-        </section>
-        <section onClick={() => scrollTo(webappRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.8}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/webapp.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>Web App Development</span>
-        </section>
-        <section onClick={() => scrollTo(uiuxRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.8}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/uiux.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>UI/UX Design</span>
-        </section>
-        <section onClick={() => scrollTo(seoRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.8}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/seo.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>SEO</span>
-        </section>
-        <section onClick={() => scrollTo(marketingRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.8}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/marketing.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>Marketing</span>
-        </section>
-        <section onClick={() => scrollTo(designRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.8}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/design.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>Graphic Design</span>
-        </section>
-        <section onClick={() => scrollTo(brandingRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.8}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/branding.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>Brand Design</span>
-        </section>
-        <section onClick={() => scrollTo(suiteRef)}>
-          <div>
-            <Lot
-              autoplay
-              loop
-              speed={0.9}
-              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/package.json"
-              style={{ width: "18rem", height: "16rem" }}
-            ></Lot>
-          </div>
-          <span>Suite</span>
-        </section>
+        <Link to="#website">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.7}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/website.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>Website Development</span>
+          </section>
+        </Link>
+        <Link to="#webapp">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.8}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/webapp.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>Web App Development</span>
+          </section>
+        </Link>
+        <Link to="#ui">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.8}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/uiux.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>UI/UX Design</span>
+          </section>
+        </Link>
+        <Link to="#seo">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.8}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/seo.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>SEO</span>
+          </section>
+        </Link>
+        <Link to="#marketing">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.8}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/marketing.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>Marketing</span>
+          </section>
+        </Link>
+        <Link to="#design">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.8}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/design.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>Graphic Design</span>
+          </section>
+        </Link>
+        <Link to="#brand">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.8}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/branding.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>Brand Design</span>
+          </section>
+        </Link>
+        <Link to="#suite">
+          <section className={styles.card}>
+            <div>
+              <Lot
+                autoplay
+                loop
+                speed={0.9}
+                src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/services/package.json"
+                style={{ width: "18rem", height: "16rem" }}
+              ></Lot>
+            </div>
+            <span>Suite</span>
+          </section>
+        </Link>
       </section>
       <section className={styles.descriptions}>
-        <section ref={websiteRef} className={styles.websiteBox}>
+        <section id="website" className={styles.websiteBox}>
           <h2>Website Development</h2>
           <p>
             A website is a set of web pages designed to provide information
@@ -176,7 +177,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section ref={webappRef} className={styles.webappBox}>
+        <section id="webapp" className={styles.webappBox}>
           <h2>Web App Development</h2>
           <p>
             A web application is a type of website designed to perform complex
@@ -217,7 +218,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section ref={uiuxRef} className={styles.uiBox}>
+        <section id="ui" className={styles.uiBox}>
           <h2>UI/UX Design</h2>
           <p>
             User interface (UI) and user experience (UX) design focus on
@@ -251,7 +252,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section ref={seoRef} className={styles.seoBox}>
+        <section id="seo" className={styles.seoBox}>
           <h2>Search Engine Optimization</h2>
           <p>
             Search Engine Optimization (SEO) involves enhancing your website’s
@@ -288,7 +289,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section ref={marketingRef} className={styles.marketingBox}>
+        <section id="marketing" className={styles.marketingBox}>
           <h2>Marketing</h2>
           <p>
             Digital marketing involves promoting your business through online
@@ -323,7 +324,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section ref={designRef} className={styles.designBox}>
+        <section id="design" className={styles.designBox}>
           <h2>Graphic Design</h2>
           <p>
             Graphic design involves creating visual content to communicate
@@ -363,7 +364,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section ref={brandingRef} className={styles.brandingBox}>
+        <section id="brand" className={styles.brandingBox}>
           <h2>Brand Design</h2>
           <p>
             Brand design involves creating a visual identity that represents
@@ -395,7 +396,7 @@ function Services() {
             </Link>
           </div>
         </section>
-        <section id="suite" ref={suiteRef} className={styles.suiteBox}>
+        <section id="suite" className={styles.suiteBox}>
           <h2>Suite</h2>
           <p>
             Suite offers a blend of our core digital services, providing an
