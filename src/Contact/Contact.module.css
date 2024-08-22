@@ -46,6 +46,7 @@
   flex-direction: column;
   gap: 2rem;
   width: 40rem;
+  position: relative;
 }
 
 .firstFields input,
@@ -279,6 +280,16 @@
 .submitButton.submit {
   pointer-events: auto;
   background-color: #023e8a;
+}
+
+.gotcha {
+  text-indent: -99999px;
+  white-space: nowrap;
+  overflow: hidden;
+  bottom: 0;
+  transform: translateY(2rem);
+  width: 100%;
+  position: absolute;
 }
 
 .feedback {
