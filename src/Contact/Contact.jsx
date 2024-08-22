@@ -159,6 +159,8 @@ function Contact() {
     }
   };
 
+  const apiKey = import.meta.env.VITE_HEROTOFU_DIGIAIRX_EMAIL_API;
+
   return (
     <section className={styles.contact}>
       <section className={styles.headerBox}>
@@ -187,6 +189,9 @@ function Contact() {
       </section>
       <section className={styles.fieldsBox}>
         <form
+          action={`https://public.herotofu.com/v1/${apiKey}`}
+          method="post"
+          acceptCharset="UTF-8"
           autoComplete="off"
           className={`
             ${styles.fields} 
@@ -431,6 +436,14 @@ function Contact() {
           >
             {allowSubmit.value}
           </button>
+          <div className={styles.gotcha} aria-hidden="true">
+            <input
+              type="text"
+              name="_gotcha"
+              tabIndex="-1"
+              autoComplete="off"
+            />
+          </div>
         </form>
       </section>
       <section className={styles.swiftContact}>
