@@ -159,7 +159,7 @@ function Contact() {
     }
   };
 
-  const apiKey = import.meta.env.VITE_HEROTOFU_DIGIAIRX_EMAIL_API;
+  const apiKey = import.meta.env.DIGIAIRX_EMAIL_API;
 
   return (
     <section className={styles.contact}>
