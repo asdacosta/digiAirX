@@ -309,7 +309,7 @@
   flex-direction: column;
   gap: 1rem;
   background-color: #03045e;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   transition: transform 0.2s ease-in-out;
 }
@@ -325,7 +325,8 @@
 }
 
 .swiftTel,
-.swiftMail {
+.swiftMail,
+.swiftWhatsApp {
   color: white;
   font-size: 0.9rem;
   user-select: all;
@@ -334,6 +335,21 @@
 .swiftCard svg {
   width: 1.2rem;
   fill: white;
+}
+
+.swiftWhatsAppBox svg {
+  fill: rgb(42, 204, 185);
+}
+
+.swiftWhatsApp {
+  cursor: pointer;
+  color: rgb(42, 204, 185);
+  user-select: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.swiftWhatsApp:hover {
+  color: rgb(16, 146, 131);
 }
 
 @media (max-width: 700px) {
