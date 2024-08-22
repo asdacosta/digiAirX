@@ -172,16 +172,17 @@ svg.tiktok {
   width: 2rem;
 }
 
-.tiktok:hover {
-  fill: rgb(44, 42, 42);
+.whatsapp:hover {
+  fill: rgb(18, 140, 126);
 }
+
 /* 
 .snapchat:hover {
   fill: yellow;
 }
 
-.whatsapp:hover {
-  fill: rgb(18, 140, 126);
+.tiktok:hover {
+  fill: rgb(44, 42, 42);
 }
 
 .telegram:hover {
