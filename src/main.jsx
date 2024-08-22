@@ -6,6 +6,7 @@ import { Home } from "./Home/Home.jsx";
 import { About } from "./About/About.jsx";
 import { Services } from "./Services/Services.jsx";
 import { Contact } from "./Contact/Contact.jsx";
+import { ContactFeedback } from "./Contact/ContactFeedback/ContactFeedback.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },
       { path: "contact", element: <Contact /> },
+      { path: "feedback", element: <ContactFeedback /> },
     ],
   },
 ]);
