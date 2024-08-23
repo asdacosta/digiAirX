@@ -9,7 +9,7 @@
 }
 
 .logoBox img {
-  width: 3rem;
+  width: 3.3rem;
 }
 
 .right {
@@ -67,7 +67,7 @@
 
 @media (max-width: 700px) {
   .nav {
-    padding: 0.5rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
   }
 
   .menu {
@@ -83,17 +83,17 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: 0.9rem;
+    gap: 1rem;
     border-top-left-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
     background: linear-gradient(120deg, #0077b6 40%, #03045e);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0% 100%);
     position: absolute;
-    right: 0.7rem;
+    right: 0.5rem;
     top: 3rem;
     width: 0;
     height: 0;
-    padding: 0.5rem 0.2rem 0.5rem 0.5rem;
+    padding: 0.5rem 0.2rem 0.7rem 0.5rem;
     opacity: 0;
     pointer-events: none;
     overflow: visible;
@@ -113,12 +113,11 @@
   .links.open {
     opacity: 1;
     pointer-events: auto;
-    width: 6.5rem;
-    height: 9.2rem;
+    width: 7rem;
+    height: 10.5rem;
   }
 
   .links button {
-    font-size: 0.9rem;
     opacity: 0;
     transform: translateY(1rem);
     transition: transform 0.25s ease-in-out, opacity 0.2s 0.2s;
@@ -150,10 +149,6 @@
 
   button.contact {
     transition-delay: 0.55s;
-  }
-
-  .logoBox img {
-    width: 2.8rem;
   }
 }
 
