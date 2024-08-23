@@ -16,7 +16,6 @@ export const ThemeContext = createContext({
 function App() {
   const [stopLoad, setStopLoad] = useState(false);
   const [theme, setTheme] = useState("light");
-  const [extractedTheme, setExtractedTheme] = useState(false);
   const endLoadOnComplete = () => setStopLoad(true);
   const location = useLocation();
 
@@ -32,10 +31,8 @@ function App() {
     if (storedTheme) {
       // document.documentElement.setAttribute("data-theme", storedTheme);
       document.body.setAttribute("data-theme", storedTheme);
+      setTheme(storedTheme);
     }
-
-    setExtractedTheme(true);
-    setTheme(storedTheme);
   };
   useEffect(extractAndSetTheme, []);
 
