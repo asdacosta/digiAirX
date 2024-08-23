@@ -79,6 +79,11 @@
     background-color: transparent;
   }
 
+  .switch,
+  .menu {
+    padding: 0;
+  }
+
   .links {
     flex-direction: column;
     align-items: flex-end;
