@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [socialName, setSocialName] = useState("");
-  const [logo, setLogo] = useState(lightLogo);
   const { theme, setTheme } = useContext(ThemeContext);
 
   const mainHeaderRef = useRef(null);
@@ -53,17 +52,13 @@ function Home() {
   };
   useEffect(typeInfo, []);
 
-  const updateLogo = () =>
-    theme === "light" ? setLogo(lightLogo) : setLogo(darkLogo);
-  useEffect(updateLogo, [theme]);
-
   return (
     <section id="homeHead" className={styles.home}>
       <section className={styles.firstHome}>
         <section className={styles.intro}>
           <h1>
             <img
-              src={theme === "light" ? logo : darkLogo}
+              src={theme === "dark" ? darkLogo : lightLogo}
               alt="Digiairx logo"
             />
             DigiairX
