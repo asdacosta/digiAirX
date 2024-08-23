@@ -15,7 +15,7 @@ export const ThemeContext = createContext({
 
 function App() {
   const [stopLoad, setStopLoad] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(null);
   const endLoadOnComplete = () => setStopLoad(true);
   const location = useLocation();
 
@@ -27,16 +27,15 @@ function App() {
   }, [location]);
 
   const extractAndSetTheme = () => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      // document.documentElement.setAttribute("data-theme", storedTheme);
-      document.body.setAttribute("data-theme", storedTheme);
-      setTheme(storedTheme);
-    }
+    const storedTheme = localStorage.getItem("theme") || "light";
+    // document.documentElement.setAttribute("data-theme", storedTheme);
+    document.body.setAttribute("data-theme", storedTheme);
+    setTheme(storedTheme);
   };
   useEffect(extractAndSetTheme, []);
 
   const updateThemeInStorageAndDom = () => {
+    if (!theme) return;
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   };
