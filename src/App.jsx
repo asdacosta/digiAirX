@@ -39,10 +39,11 @@ function App() {
   };
   useEffect(extractAndSetTheme, []);
 
-  useEffect(() => {
+  const updateThemeInStorageAndDom = () => {
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-  }, [theme]);
+  };
+  useEffect(updateThemeInStorageAndDom, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
