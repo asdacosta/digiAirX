@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./Nav.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import logo from "../assets/logo.png";
+import lightLogo from "../assets/logo.png";
 import darkLogo from "../assets/logo-dark.png";
 import { ThemeContext } from "../App";
 import { NavLink } from "react-router-dom";
@@ -12,6 +12,7 @@ function Nav() {
   const [menuOpened, setMenuOpened] = useState(false);
   const [segment, setSegment] = useState([0, 30]);
   const { theme, setTheme } = useContext(ThemeContext);
+  const [logo, setLogo] = useState(lightLogo);
 
   const switchRefCallback = (lottie) => setLottie(lottie);
   const menuRef = useRef(null);
@@ -39,10 +40,14 @@ function Nav() {
     menuRef.current.play();
   };
 
+  const updateLogo = () =>
+    theme === "light" ? setLogo(lightLogo) : setLogo(darkLogo);
+  useEffect(updateLogo, [theme]);
+
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
-        <img src={theme === "light" ? logo : darkLogo} alt="Digiairx logo" />
+        <img src={logo} alt="Digiairx logo" />
       </section>
       <section className={styles.right}>
         <section
