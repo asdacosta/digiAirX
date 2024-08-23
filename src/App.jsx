@@ -54,7 +54,7 @@ function App() {
           <Nav />
           <ScrollToTop />
           <Outlet />
-          <Footer />
+          {location.pathname && <Footer />}
         </>
       )}
     </ThemeContext.Provider>
