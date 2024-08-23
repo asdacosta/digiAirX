@@ -28,21 +28,21 @@ function App() {
   }, [location]);
 
   const extractAndSetTheme = () => {
-    if (!extractedTheme) {
-      const storedTheme = localStorage.getItem("theme");
-      if (storedTheme) {
-        document.documentElement.setAttribute("data-theme", storedTheme);
-        document.body.setAttribute("data-theme", storedTheme);
-      }
-
-      setExtractedTheme(true);
-      setTheme(storedTheme);
-      return;
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      // document.documentElement.setAttribute("data-theme", storedTheme);
+      document.body.setAttribute("data-theme", storedTheme);
     }
+
+    setExtractedTheme(true);
+    setTheme(storedTheme);
+  };
+  useEffect(extractAndSetTheme, []);
+
+  useEffect(() => {
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-  };
-  useEffect(extractAndSetTheme, [theme]);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
