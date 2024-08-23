@@ -30,7 +30,11 @@ function App() {
   const extractAndSetTheme = () => {
     if (!extractedTheme) {
       const storedTheme = localStorage.getItem("theme");
-      if (storedTheme) document.body.setAttribute("data-theme", storedTheme);
+      if (storedTheme) {
+        document.documentElement.setAttribute("data-theme", storedTheme);
+        document.body.setAttribute("data-theme", storedTheme);
+      }
+
       setExtractedTheme(true);
       setTheme(storedTheme);
       return;
