@@ -12,7 +12,6 @@ function Nav() {
   const [menuOpened, setMenuOpened] = useState(false);
   const [segment, setSegment] = useState([0, 30]);
   const { theme, setTheme } = useContext(ThemeContext);
-  const [logo, setLogo] = useState(lightLogo);
 
   const switchRefCallback = (lottie) => setLottie(lottie);
   const menuRef = useRef(null);
@@ -40,14 +39,13 @@ function Nav() {
     menuRef.current.play();
   };
 
-  const updateLogo = () =>
-    theme === "light" ? setLogo(lightLogo) : setLogo(darkLogo);
-  useEffect(updateLogo, [theme]);
-
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
-        <img src={logo} alt="Digiairx logo" />
+        <img
+          src={theme === "dark" ? darkLogo : lightLogo}
+          alt="Digiairx logo"
+        />
       </section>
       <section className={styles.right}>
         <section
