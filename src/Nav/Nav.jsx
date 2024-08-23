@@ -82,7 +82,7 @@ function Nav() {
             speed={5}
             dotLottieRefCallback={switchRefCallback}
             src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.json"
-            style={{ width: "50px", height: "30px" }}
+            style={{ width: "50px", height: "40px" }}
           ></Lot>
         </button>
         <button onClick={playMenu} className={styles.menu}>
@@ -90,7 +90,7 @@ function Nav() {
             ref={menuRef}
             keepLastFrame={true}
             src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/menu.json"
-            style={{ width: "50px", height: "43px" }}
+            style={{ width: "50px", height: "50px" }}
           ></Player>
         </button>
       </section>
