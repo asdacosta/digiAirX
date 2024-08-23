@@ -19,6 +19,7 @@ function Nav() {
 
   const playSwitch = () => {
     if (!lottie) return;
+    lottie.play();
 
     if (theme === "light") {
       setSegment([0, 30]);
@@ -27,7 +28,6 @@ function Nav() {
       setSegment([30, 60]);
       setTheme("light");
     }
-    lottie.play();
   };
 
   const playMenu = () => {
