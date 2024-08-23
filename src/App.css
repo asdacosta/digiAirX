@@ -4,7 +4,6 @@
 
 body {
   overflow-x: hidden;
-  background-color: #03055e31;
 }
 
 #root {
@@ -39,10 +38,6 @@ input,
 textarea,
 select {
   font-family: "Montserrat", sans-serif;
-}
-
-body[data-theme="dark"] {
-  background-color: #010112;
 }
 
 body[data-theme="dark"] #root {
