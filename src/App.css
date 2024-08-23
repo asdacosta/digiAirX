@@ -2,12 +2,9 @@
   border: 0.2rem solid teal;
 } */
 
-html {
-  background-color: #03055e31;
-}
-
 body {
   overflow-x: hidden;
+  background-color: #03055e31;
 }
 
 #root {
@@ -44,7 +41,7 @@ select {
   font-family: "Montserrat", sans-serif;
 }
 
-html[data-theme="dark"] {
+body[data-theme="dark"] {
   background-color: #010112;
 }
 
@@ -55,6 +52,10 @@ body[data-theme="dark"] #root {
 
 body::-webkit-scrollbar {
   width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #03055e31;
 }
 
 body::-webkit-scrollbar-thumb {
