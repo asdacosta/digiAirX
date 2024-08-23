@@ -2,9 +2,12 @@
   border: 0.2rem solid teal;
 } */
 
+html {
+  background-color: #03055e31;
+}
+
 body {
   overflow-x: hidden;
-  background-color: #03055e31;
 }
 
 #root {
