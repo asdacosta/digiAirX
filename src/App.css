@@ -44,7 +44,7 @@ select {
   font-family: "Montserrat", sans-serif;
 }
 
-body[data-theme="dark"] {
+html[data-theme="dark"] {
   background-color: #010112;
 }
 
