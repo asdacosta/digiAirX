@@ -53,7 +53,7 @@
 .secFields input,
 .fields select,
 .lastFields input {
-  height: 1.8rem;
+  height: 2rem;
   border-radius: 0.5rem;
   padding: 0 0.3rem;
 }
@@ -125,7 +125,7 @@
 .lastFields label {
   position: relative;
   left: 0.3rem;
-  bottom: -2rem;
+  bottom: -2.1rem;
   color: rgba(0, 0, 0, 0.7);
   transition: bottom 0.3s ease-in-out;
   pointer-events: none;
