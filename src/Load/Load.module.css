@@ -2,9 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
-  background-color: #03055e31;
+  background-color: #cfcfe0;
+  z-index: 11;
   width: 100vw;
   height: 100vh;
   transform: rotateY(180deg);
+}
+
+body[data-theme="dark"] .load {
+  background: #010112;
 }
