@@ -87,8 +87,10 @@ function Home() {
               autoplay
               loop
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/team.lottie"
-              style={{ width: "55vmin", height: "40vmin" }}
+              style={{ width: "55vmin", height: "35vmin" }}
             ></Lot>
+          </section>
+          <section>
             <div className={styles.connectNow}>
               <p>
                 Let's schedule an in-person meeting or connect virtually via
@@ -101,8 +103,16 @@ function Home() {
           </section>
           <section
             className={`${socialsOpen ? styles.isOpen : ""} ${styles.socials}`}
-            onMouseEnter={() => setSocialsOpen(true)}
-            onMouseLeave={() => setSocialsOpen(false)}
+            onMouseEnter={() => {
+              setTimeout(() => {
+                setSocialsOpen(true);
+              }, 500);
+            }}
+            onMouseLeave={() => {
+              setTimeout(() => {
+                setSocialsOpen(false);
+              }, 500);
+            }}
           >
             <div>
               <svg
