@@ -313,12 +313,20 @@ svg.tiktok {
     font-size: 1.7rem;
   }
 
+  .socials svg {
+    pointer-events: none;
+  }
+
   .socials:hover::before {
     left: 0;
   }
 
   .socials.isOpen::before {
     left: -100%;
+  }
+
+  .socials.isOpen svg {
+    pointer-events: auto;
   }
 }
 
