@@ -2,8 +2,8 @@ import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./Nav.module.css";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import lightLogo from "../assets/logo.png";
-import darkLogo from "../assets/logo-dark.png";
+import lightLogo from "../assets/logo-light.jpg";
+import darkLogo from "../assets/logo-dark.jpg";
 import { ThemeContext } from "../App";
 import { NavLink } from "react-router-dom";
 
