@@ -91,7 +91,7 @@
 .thirdFields::before {
   content: "Required";
   position: absolute;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: #023e8a;
   top: 0.5rem;
@@ -106,11 +106,10 @@
 
 .secFields > div::before,
 .firstFields > div:last-child::before,
-.lastFields > div:first-child::before,
-.thirdFields > div {
+.lastFields > div:first-child::before {
   content: "Optional";
   position: absolute;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
   top: 0.5rem;
@@ -264,7 +263,7 @@
 
 .submitButton {
   align-self: center;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   padding: 0.2rem 0.7rem;
   border-radius: 0.5rem;
   background-color: #0077b6;
@@ -293,10 +292,10 @@
 }
 
 .feedback {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   position: absolute;
-  bottom: -0.9rem;
+  bottom: -0.95rem;
   color: #03045e;
   background-color: yellow;
   padding: 0 0.3rem;
@@ -435,6 +434,33 @@
 
   .swiftContact > p {
     transform: translateX(0);
+  }
+
+  .firstFields > div::before,
+  .lastFields > div::before,
+  .thirdFields::before,
+  .secFields > div::before,
+  .firstFields > div:last-child::before,
+  .lastFields > div:first-child::before {
+    font-size: 0.8rem;
+  }
+
+  .firstFields input,
+  .secFields input,
+  .lastFields input,
+  .fields select,
+  .lastFields textarea {
+    font-size: 1.05rem;
+  }
+
+  .feedback {
+    font-size: 0.85rem;
+  }
+
+  .swiftTel,
+  .swiftMail,
+  .swiftWhatsApp {
+    font-size: 1rem;
   }
 }
 
