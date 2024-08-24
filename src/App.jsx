@@ -43,6 +43,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      <Background />
       {!stopLoad ? (
         <Load endOnComplete={endLoadOnComplete} />
       ) : (
@@ -53,7 +54,6 @@ function App() {
           <Footer />
         </>
       )}
-      <Background />
     </ThemeContext.Provider>
   );
 }
