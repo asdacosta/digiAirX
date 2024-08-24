@@ -82,12 +82,23 @@ function Home() {
           </p>
         </section>
         <section className={styles.illustrationBox}>
-          <Lot
-            autoplay
-            loop
-            src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/team.lottie"
-            style={{ width: "55vmin", height: "40vmin" }}
-          ></Lot>
+          <section>
+            <Lot
+              autoplay
+              loop
+              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/team.lottie"
+              style={{ width: "55vmin", height: "40vmin" }}
+            ></Lot>
+            <div className={styles.connectNow}>
+              <p>
+                Let's schedule an in-person meeting or connect virtually via
+                email or phone to discuss how we can elevate your business.
+              </p>
+              <div className={styles.connectNowButton}>
+                <button>Connect Now</button>
+              </div>
+            </div>
+          </section>
           <section
             className={`${socialsOpen ? styles.isOpen : ""} ${styles.socials}`}
             onMouseEnter={() => setSocialsOpen(true)}
