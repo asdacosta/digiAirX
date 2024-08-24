@@ -43,17 +43,17 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      <Nav />
       {!stopLoad ? (
         <Load endOnComplete={endLoadOnComplete} />
       ) : (
         <>
-          <Background />
-          <Nav />
           <ScrollToTop />
           <Outlet />
           <Footer />
         </>
       )}
+      <Background />
     </ThemeContext.Provider>
   );
 }
