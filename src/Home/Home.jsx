@@ -2,8 +2,8 @@ import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { DotLottieReact as Lot } from "@lottiefiles/dotlottie-react";
-import lightLogo from "../assets/logo.png";
-import darkLogo from "../assets/logo-dark.png";
+import lightLogo from "../assets/logo-light.jpg";
+import darkLogo from "../assets/logo-dark.jpg";
 import { ThemeContext } from "../App";
 import { Link } from "react-router-dom";
 
