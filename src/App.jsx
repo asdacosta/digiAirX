@@ -43,6 +43,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      <Nav />
       {!stopLoad ? (
         <Load endOnComplete={endLoadOnComplete} />
       ) : (
@@ -52,7 +53,6 @@ function App() {
           <Footer />
         </>
       )}
-      <Nav />
       <Background />
     </ThemeContext.Provider>
   );
