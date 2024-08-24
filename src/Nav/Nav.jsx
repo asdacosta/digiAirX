@@ -43,7 +43,13 @@ function Nav() {
     <section className={styles.nav}>
       <section className={styles.logoBox}>
         <img
-          src={theme === "dark" ? darkLogo : lightLogo}
+          src={lightLogo}
+          style={theme === "light" ? { display: "block" } : { display: "none" }}
+          alt="Digiairx logo"
+        />
+        <img
+          src={darkLogo}
+          style={theme === "dark" ? { display: "block" } : { display: "none" }}
           alt="Digiairx logo"
         />
       </section>
