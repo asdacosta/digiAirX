@@ -7,6 +7,9 @@
   width: 100vw;
   height: 100vh;
   transform: rotateY(180deg);
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 body[data-theme="dark"] .load {
