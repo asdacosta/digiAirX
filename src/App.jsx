@@ -51,9 +51,9 @@ function App() {
           <ScrollToTop />
           <Outlet />
           <Footer />
-          <Background />
         </>
       )}
+      <Background />
     </ThemeContext.Provider>
   );
 }
