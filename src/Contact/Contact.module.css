@@ -464,7 +464,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   .secFields > div:nth-child(2) {
     width: 20rem;
   }
@@ -475,8 +475,8 @@
 }
 
 @media (max-width: 350px) {
-  .secFields > div:nth-child(2) {
-    width: 17rem;
+  .secFields > div {
+    width: 17rem !important;
   }
 
   .fields {
