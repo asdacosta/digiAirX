@@ -4,6 +4,7 @@
 
 body {
   overflow-x: hidden;
+  background: #03055e31;
 }
 
 #root {
@@ -49,17 +50,13 @@ body::-webkit-scrollbar {
   width: 0.8rem;
 }
 
-body::-webkit-scrollbar-track {
-  background: #03055e31;
-}
-
 body::-webkit-scrollbar-thumb {
   background-color: #0077b6;
   border-radius: 2rem;
   border: 0.2rem solid #cdcedf;
 }
 
-body[data-theme="dark"]::-webkit-scrollbar-track {
+body[data-theme="dark"] {
   background: #010112;
 }
 
