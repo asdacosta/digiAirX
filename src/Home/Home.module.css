@@ -93,9 +93,19 @@ h1 {
 .illustrationBox {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
   align-items: center;
   position: relative;
+  max-width: 30rem;
+}
+
+.connectNow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: justify;
 }
 
 .socials {
@@ -237,13 +247,18 @@ svg.tiktok {
   height: 4rem;
 }
 
+.connectNowButton {
+  height: 3rem;
+}
+
 .actionButtons svg {
   width: 1.2rem;
   fill: white;
   transition: fill 0.25s;
 }
 
-.actionButtons button {
+.actionButtons button,
+.connectNowButton > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,7 +275,8 @@ svg.tiktok {
   transition: all 0.25s;
 }
 
-.actionButtons button:hover {
+.actionButtons button:hover,
+.connectNowButton > button:hover {
   background-color: rgb(206, 207, 224);
   color: #023e8a;
   border: 0.05rem solid #023e8a;
