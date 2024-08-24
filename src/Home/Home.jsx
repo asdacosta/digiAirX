@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 function Home() {
   const [socialName, setSocialName] = useState("");
   const { theme, setTheme } = useContext(ThemeContext);
+  const [socialsOpen, setSocialsOpen] = useState(false);
 
   const mainHeaderRef = useRef(null);
   const typeMainHeader = () => {
@@ -87,7 +88,11 @@ function Home() {
             src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/team.lottie"
             style={{ width: "55vmin", height: "40vmin" }}
           ></Lot>
-          <section className={styles.socials}>
+          <section
+            className={`${socialsOpen ? styles.isOpen : ""} ${styles.socials}`}
+            onMouseEnter={() => setSocialsOpen(true)}
+            onMouseLeave={() => setSocialsOpen(false)}
+          >
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
