@@ -345,6 +345,10 @@ svg.tiktok {
   .socials.isOpen svg {
     pointer-events: auto;
   }
+
+  .socials {
+    bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 450px) {
