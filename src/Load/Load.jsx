@@ -11,7 +11,12 @@ function Load({ endOnComplete }) {
   const endAndClearOnComplete = () => {
     if (!lottie) return;
     lottie.addEventListener("complete", endOnComplete);
-    return () => lottie.removeEventListener("complete", endOnComplete);
+    const fallbackCall = setTimeout(() => endOnComplete(), 4000);
+
+    return () => {
+      lottie.removeEventListener("complete", endOnComplete);
+      clearTimeout(fallbackCall);
+    };
   };
   useEffect(endAndClearOnComplete, [lottie]);
 
@@ -23,7 +28,7 @@ function Load({ endOnComplete }) {
       <Lot
         autoplay
         dotLottieRefCallback={lottieRefCall}
-        speed={1.5}
+        speed={2}
         src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/load.json"
         style={{ width: "12rem", height: "12rem" }}
       ></Lot>
