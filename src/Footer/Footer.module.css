@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 400;
   text-align: left;
   padding: 2rem;
@@ -22,13 +22,13 @@
 
 .socials svg {
   fill: rgb(0, 0, 0);
-  width: 1.2rem;
+  width: 1.3rem;
   cursor: pointer;
   transition: fill 0.3s ease-in-out;
 }
 
 svg.tiktok {
-  width: 1.4rem;
+  width: 1.5rem;
 }
 
 .socials svg:hover {
@@ -104,13 +104,14 @@ svg.tiktok {
 }
 
 .directLinks button {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: white;
   background-color: transparent;
   padding: 0;
   text-align: left;
   white-space: nowrap;
 }
+
 .directLinks button::after {
   display: block;
   position: relative;
@@ -185,5 +186,11 @@ svg.tiktok {
   .copyrightBox {
     border-top: 0.15rem solid #03045e;
     padding-top: 0.3rem;
+  }
+
+  .directLinks button,
+  .allLinks h4,
+  .footer {
+    font-size: 1rem;
   }
 }
