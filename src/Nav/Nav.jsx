@@ -5,7 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import lightLogo from "../assets/logo-light.jpg";
 import darkLogo from "../assets/logo-dark.jpg";
 import { ThemeContext } from "../App";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   const [lottie, setLottie] = useState(null);
@@ -42,16 +42,22 @@ function Nav() {
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
-        <img
-          src={lightLogo}
-          style={theme === "light" ? { display: "block" } : { display: "none" }}
-          alt="Digiairx logo"
-        />
-        <img
-          src={darkLogo}
-          style={theme === "dark" ? { display: "block" } : { display: "none" }}
-          alt="Digiairx logo"
-        />
+        <Link to="/">
+          <img
+            src={lightLogo}
+            style={
+              theme === "light" ? { display: "block" } : { display: "none" }
+            }
+            alt="Digiairx logo"
+          />
+          <img
+            src={darkLogo}
+            style={
+              theme === "dark" ? { display: "block" } : { display: "none" }
+            }
+            alt="Digiairx logo"
+          />
+        </Link>
       </section>
       <section className={styles.right}>
         <section
