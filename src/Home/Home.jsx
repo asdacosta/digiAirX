@@ -135,7 +135,7 @@ function Home() {
                 className={styles.linkedIn}
                 onClick={() => {
                   window.open(
-                    "https://www.linkedin.com/company/104608500/admin/dashboard/",
+                    "https://www.linkedin.com/company/104608500",
                     "_blank"
                   );
                 }}
