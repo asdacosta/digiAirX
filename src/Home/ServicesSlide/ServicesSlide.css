@@ -1,0 +1,47 @@
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95vmin;
+  height: 60vmin;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+}
+
+.swiper-slide img {
+  width: 18rem;
+  height: 23rem;
+  object-fit: fill;
+  user-select: none;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: #0077b6;
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: #0077b6;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #0077b6;
+}
+
+.swiper .swiper-scrollbar {
+  bottom: 2rem;
+}
+
+.swiper .swiper-scrollbar-drag {
+  background: #0077b6;
+}
