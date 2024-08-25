@@ -219,7 +219,6 @@ svg.tiktok {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  height: 100vh;
   max-width: 50rem;
   text-align: justify;
   cursor: context-menu;
@@ -235,6 +234,15 @@ svg.tiktok {
 
 .knowUs,
 .callToAction,
+.servicesSlide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100vh;
+}
+
 .homeCards {
   display: flex;
   flex-direction: column;
