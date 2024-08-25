@@ -31,7 +31,7 @@
 
 **Desktop Light-Theme View:**
 
-<img src="./readme-assets/darkBg.png" alt="desktop view">
+<img src="./readme-assets/lightBg.png" alt="desktop view">
 <br>
 
 **Desktop Dark-Theme View:**
