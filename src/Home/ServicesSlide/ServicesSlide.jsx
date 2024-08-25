@@ -21,20 +21,28 @@ import {
   Scrollbar,
 } from "swiper/modules";
 import "./ServicesSlide.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ServicesSlide() {
+  const [serviceName, setServiceName] = useState("");
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
   const slidesData = [
-    { src: websiteSvg, alt: "Website dev" },
-    { src: webappSvg, alt: "Webapp dev" },
-    { src: uiSvg, alt: "UI/UX" },
-    { src: seoSvg, alt: "SEO" },
+    { src: websiteSvg, alt: "Website Development" },
+    { src: webappSvg, alt: "Web App Development" },
+    { src: uiSvg, alt: "UI/UX design" },
+    { src: seoSvg, alt: "Search Engine Optimization" },
     { src: marketingSvg, alt: "Marketing" },
-    { src: designSvg, alt: "Graphic design" },
-    { src: brandingSvg, alt: "Brand design" },
+    { src: designSvg, alt: "Graphic Design" },
+    { src: brandingSvg, alt: "Brand Design" },
     { src: suiteSvg, alt: "Suite" },
   ];
+
+  useEffect(() => {
+    slidesData.forEach((svg, index) => {
+      if (index === currentSlideIndex) setServiceName(svg.alt);
+    });
+  }, [currentSlideIndex]);
 
   return (
     <>
@@ -59,6 +67,7 @@ function ServicesSlide() {
           </Slide>
         ))}
       </Swipe>
+      <span className="serviceName">{serviceName}</span>
     </>
   );
 }
