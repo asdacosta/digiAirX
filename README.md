@@ -1,6 +1,6 @@
 <div align='center'>
 
-# Template
+# DigiairX
 
 </div>
 <div align='center'>
@@ -17,29 +17,26 @@
     <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React badge">
     <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite badge">
     <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel badge">
-    <img src="https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion badge">
-    <img src="https://img.shields.io/badge/Swiper-4880ED?style=for-the-badge&logo=swiper&logoColor=white" alt="Swiper badge">
     <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router badge">
-    <!-- <h4><a href="https://asdacosta.github.io/###/">Live Preview</a></h4> -->
+    <h4><a href="https://digiairx.vercel.app">Live Preview</a></h4>
 </div>
 
 **Demo:**
 
-<img src="./readme-assets/folder.png" alt="folder">
 <!-- ![Live Demo](./readme-assets/) -->
 
 <details>
 
 **<summary>Screen views</summary>**
 
-**Desktop View:**
+**Desktop Light-Theme View:**
 
-<!-- <img src="./readme-assets/desktop.png" alt="desktop view"> -->
+<img src="./readme-assets/darkBg.png" alt="desktop view">
 <br>
 
-**Tablet View:**
+**Desktop Dark-Theme View:**
 
-<!-- <img src="./readme-assets/tablet.png" alt="desktop view"> -->
+<img src="./readme-assets/darkBg.png" alt="desktop view">
 <br>
 
 **Mobile View:**
@@ -50,22 +47,23 @@
 
 ## 🌐 Origin
 
-<!-- [The Odin Project](https://www.theodinproject.com/) -->
+Personal
 
 ## 📝 Description
 
-Store all template files.
+Offer digital services to businesses.
 
 <details>
 <summary>Features</summary>
 
-- ###
+- Real-time feedback form in Contact Section
+- Fast
 
 </details>
 
 ## 🎯 Relevance
 
-To solidify concepts of `###` in ###.
+Showcase prowess in React and UI/UX design.
 
 ## 👥 Intended Audience
 
@@ -96,11 +94,23 @@ Developers, users, and non-developers.
 | File              | Description                                                                                                                                                             |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `src/*`           | Source files that are bundled into the output directory `dist/`.                                                                                                        |
-| `src/index.js`    | The main JavaScript entry point that bundling begins.                                                                                                                   |
+| `src/main.jsx`    | The main JavaScript entry point that bundling begins.                                                                                                                   |
+| `src/App.jsx`     | Main component where overall structure and other layout components of the app are contained.                                                                            |
+| `src/assets/*`    | All assets(images, icons, vids) used in website.                                                                                                                        |
+| `src/About`       | Component and stylesheet for About section.                                                                                                                             |
+| `src/Home`        | Component and stylesheet for Home section.                                                                                                                              |
+| `src/Load`        | Component and stylesheet for Load displayed at page load.                                                                                                               |
+| `src/Contact`     | Component and stylesheet for Contact section.                                                                                                                           |
+| `src/Footer`      | Component and stylesheet for Footer section.                                                                                                                            |
+| `src/Logo`        | Used to generate logo img.                                                                                                                                              |
+| `src/Navigation`  | Component and stylesheet for Navigation section.                                                                                                                        |
+| `src/ScrollTo`    | Make a click on each component move to top.                                                                                                                             |
+| `src/Services`    | Component and stylesheet for Services section.                                                                                                                          |
+| `Background.jsx`  | Display particles on background                                                                                                                                         |
+| `src/reset.css`   | Resets style to default for consistency across different devices and browsers.                                                                                          |
 | `dist/*`          | Output files from bundling of files in directory `src/`.                                                                                                                |
 | `dist/main.js`    | Main JavaScript output file that contains the bundled JavaScript code. Code is minified and optimized for deployment (Due to mode set to production in webpack config). |
 | `package*`        | Contains details of project and dependencies versions.                                                                                                                  |
-| `algorithm.txt`   | Algorithm for `JavaScript`.                                                                                                                                             |
 | `readme-assets/*` | Live demo and different screen views used in `README.md`.                                                                                                               |
 
 </details>
@@ -110,9 +120,8 @@ Developers, users, and non-developers.
 <details>
 <summary>Invert</summary>
 
-| File             | Description                      |
-| ---------------- | -------------------------------- |
-| `src/assets/###` | Photo created by ### on [###](). |
+| File | Description |
+| ---- | ----------- |
 
 </details>
 
@@ -121,7 +130,7 @@ Developers, users, and non-developers.
 <details>
 <summary>Invert</summary>
 
-- [ ] ###
+- [ ] Improve performance
 
 </details>
 
@@ -129,4 +138,4 @@ Developers, users, and non-developers.
 
 1. [Name](https://github.com/asdacosta)
 
-**[🞁 Top](#template)**
+**[🞁 Top](#digiairx)**
