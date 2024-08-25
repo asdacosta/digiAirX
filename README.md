@@ -131,6 +131,7 @@ Developers, users, and non-developers.
 <summary>Invert</summary>
 
 - [ ] Improve performance
+- [ ] Move components to components/
 
 </details>
 
