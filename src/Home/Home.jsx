@@ -6,6 +6,7 @@ import lightLogo from "../assets/logo-light.jpg";
 import darkLogo from "../assets/logo-dark.jpg";
 import { ThemeContext } from "../App";
 import { Link } from "react-router-dom";
+import { ServicesSlide } from "./ServicesSlide/ServicesSlide";
 
 function Home() {
   const [socialName, setSocialName] = useState("");
@@ -261,6 +262,9 @@ function Home() {
               surpass your expectations.
             </p>
           </section>
+        </section>
+        <section className={styles.servicesSlide}>
+          <ServicesSlide />
         </section>
         <section className={styles.callToAction}>
           <h2>Reach out Now</h2>
