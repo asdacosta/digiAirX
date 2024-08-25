@@ -19,12 +19,13 @@ function App() {
   const endLoadOnComplete = () => setStopLoad(true);
   const location = useLocation();
 
-  useEffect(() => {
+  const scrollIntoViewForHashChange = () => {
     const hash = location.hash;
     if (!hash) return;
     const element = document.getElementById(hash.replace("#", ""));
     if (element) element.scrollIntoView({ behavior: "smooth" });
-  }, [location]);
+  };
+  useEffect(scrollIntoViewForHashChange, [location]);
 
   const extractAndSetTheme = () => {
     const storedTheme = localStorage.getItem("theme") || "light";
