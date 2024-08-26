@@ -45,3 +45,22 @@
 .swiper .swiper-scrollbar-drag {
   background: #0077b6;
 }
+
+.serviceName {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.serviceNameBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 0.1rem solid #0077b6;
+  border-bottom: 0.1rem solid #0077b6;
+  padding: 0.25rem 0;
+}
+
+.serviceNameBox > svg {
+  width: 1.2rem;
+  fill: #0077b6;
+}
