@@ -13,8 +13,8 @@
 }
 
 .swiper-slide img {
-  width: 18rem;
-  height: 23rem;
+  width: 90%;
+  height: 25rem;
   object-fit: fill;
   user-select: none;
 }
@@ -39,7 +39,7 @@
 }
 
 .swiper .swiper-scrollbar {
-  bottom: 2rem;
+  bottom: 0;
 }
 
 .swiper .swiper-scrollbar-drag {
@@ -61,6 +61,12 @@
 }
 
 .serviceNameBox > svg {
-  width: 1.2rem;
+  width: 1.1rem;
   fill: #0077b6;
+}
+
+@media (max-width: 700px) {
+  .swiper-slide img {
+    height: 20rem;
+  }
 }
