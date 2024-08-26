@@ -91,17 +91,6 @@ function Home() {
               style={{ width: "55vmin", height: "35vmin" }}
             ></Lot>
           </section>
-          <section>
-            <div className={styles.connectNow}>
-              <p>
-                Let's schedule an in-person meeting or connect virtually via
-                email or phone to discuss how we can elevate your business.
-              </p>
-              <div className={styles.connectNowButton}>
-                <button>Connect Now</button>
-              </div>
-            </div>
-          </section>
           <section
             className={`${socialsOpen ? styles.isOpen : ""} ${styles.socials}`}
             onMouseEnter={() => {
@@ -247,20 +236,34 @@ function Home() {
         </section>
       </section>
       <section className={styles.secHome}>
-        <section className={styles.knowUs}>
-          <h2>Get to Know Us</h2>
-          <section className={styles.homeCards}>
-            <p>
-              At Digiairx, we are devoted to helping businesses achieve success
-              in the digital world. Our experienced team of experts delivers the
-              best digital services meticulously tailored to meet your specific
-              needs.
-            </p>
-            <p>
-              Our collaborative approach ensures we fully understand your
-              objectives and vision, providing solutions that not only meet but
-              surpass your expectations.
-            </p>
+        <section className={styles.homeAbout}>
+          <section className={styles.knowUs}>
+            <h2>Get to Know Us</h2>
+            <section className={styles.homeCards}>
+              <p>
+                At DigiairX, we are devoted to helping businesses achieve
+                success in the digital world. Our experienced team of experts
+                delivers the best digital services meticulously tailored to meet
+                your specific needs.
+              </p>
+              <p>
+                Our collaborative approach ensures we fully understand your
+                objectives and vision, providing solutions that not only meet
+                but surpass your expectations.
+              </p>
+            </section>
+          </section>
+          <section className={styles.connectNow}>
+            <h2>Connect</h2>
+            <section className={styles.homeCards}>
+              <p>
+                Let's schedule an in-person meeting or connect virtually via
+                email or phone to discuss how we can elevate your business.
+              </p>
+              <div className={styles.connectNowButton}>
+                <button>Connect Now</button>
+              </div>
+            </section>
           </section>
         </section>
         <section className={styles.servicesSlide}>
