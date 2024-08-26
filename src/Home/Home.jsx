@@ -261,7 +261,9 @@ function Home() {
                 email or phone to discuss how we can elevate your business.
               </p>
               <div className={styles.connectNowButton}>
-                <button>Connect Now</button>
+                <Link to="/contact">
+                  <button>Connect Now</button>
+                </Link>
               </div>
             </section>
           </section>
