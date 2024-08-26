@@ -7,11 +7,13 @@ import { About } from "./About/About.jsx";
 import { Services } from "./Services/Services.jsx";
 import { Contact } from "./Contact/Contact.jsx";
 import { ContactFeedback } from "./Contact/ContactFeedback/ContactFeedback.jsx";
+import { Error } from "./Error/Error.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
     children: [
       { index: true, element: <Home /> },
       { path: "about", element: <About /> },
