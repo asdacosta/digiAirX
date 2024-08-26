@@ -10,7 +10,7 @@
 
 .firstHome {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
 }
@@ -97,15 +97,6 @@ h1 {
   gap: 2rem;
   align-items: center;
   position: relative;
-  max-width: 30rem;
-}
-
-.connectNow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: justify;
 }
 
 .socials {
@@ -118,7 +109,6 @@ h1 {
   border-right: 0.2rem solid #042d79;
   border-radius: 2rem;
   position: relative;
-  bottom: 1rem;
   overflow: hidden;
 }
 
@@ -232,7 +222,7 @@ svg.tiktok {
   text-align: center;
 }
 
-.knowUs,
+.homeAbout,
 .callToAction,
 .servicesSlide {
   display: flex;
@@ -240,7 +230,20 @@ svg.tiktok {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  height: 100vh;
+  height: 80vh;
+}
+
+.homeAbout {
+  gap: 2rem;
+}
+
+.knowUs,
+.connectNow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .homeCards {
