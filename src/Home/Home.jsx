@@ -88,7 +88,7 @@ function Home() {
               autoplay
               loop
               src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/team.lottie"
-              style={{ width: "55vmin", height: "35vmin" }}
+              style={{ width: "60vmin", height: "40vmin" }}
             ></Lot>
           </section>
           <section
