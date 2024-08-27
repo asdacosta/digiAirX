@@ -91,14 +91,16 @@ function Nav({ visibilityValue }) {
           </NavLink>
         </section>
         <button onClick={playSwitch} className={styles.switch}>
-          <Lot
-            autoplay={theme === "dark"}
-            segment={segment}
-            speed={5}
-            dotLottieRefCallback={switchRefCallback}
-            src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.json"
-            style={{ width: "50px", height: "41px" }}
-          ></Lot>
+          {theme && (
+            <Lot
+              autoplay={theme === "dark"}
+              segment={segment}
+              speed={5}
+              dotLottieRefCallback={switchRefCallback}
+              src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/switch.json"
+              style={{ width: "50px", height: "41px" }}
+            ></Lot>
+          )}
         </button>
         <button onClick={playMenu} className={styles.menu}>
           <Player
