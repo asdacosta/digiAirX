@@ -3,7 +3,7 @@ import styles from "./Load.module.css";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../App";
 
-function Load({ endOnComplete }) {
+function Load({ endOnComplete, displayValue }) {
   const [lottie, setLottie] = useState(null);
   const { theme, setTheme } = useContext(ThemeContext);
   const lottieRefCall = (lottie) => setLottie(lottie);
@@ -23,7 +23,11 @@ function Load({ endOnComplete }) {
   return (
     <section
       className={styles.load}
-      style={theme === "dark" ? { backgroundColor: "black" } : {}}
+      const
+      style={{
+        display: displayValue,
+        ...(theme === "dark" && { backgroundColor: "black" }),
+      }}
     >
       <Lot
         autoplay
