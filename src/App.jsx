@@ -14,9 +14,13 @@ export const ThemeContext = createContext({
 });
 
 function App() {
-  const [stopLoad, setStopLoad] = useState({ stop: false, display: "flex" });
+  const [stopLoad, setStopLoad] = useState({
+    stop: false,
+    componentsVis: "hidden",
+  });
   const [theme, setTheme] = useState(null);
-  const endLoadOnComplete = () => setStopLoad({ stop: true, display: "none" });
+  const endLoadOnComplete = () =>
+    setStopLoad({ stop: true, componentsVis: "visible" });
   const location = useLocation();
 
   const scrollIntoViewForHashChange = () => {
@@ -44,15 +48,12 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <Background />
+      <Nav visibilityValue={stopLoad.componentsVis} />
+      <Background visibilityValue={stopLoad.componentsVis} />
       {!stopLoad.stop ? (
-        <Load
-          endOnComplete={endLoadOnComplete}
-          displayValue={stopLoad.display}
-        />
+        <Load endOnComplete={endLoadOnComplete} />
       ) : (
         <>
-          <Nav />
           <ScrollToTop />
           <Outlet />
           <Footer />
