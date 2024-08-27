@@ -233,8 +233,14 @@ svg.tiktok {
   height: 80vh;
 }
 
+.callToAction,
 .servicesSlide {
+  justify-content: flex-start;
   height: 70vh;
+}
+
+.callToAction {
+  height: 50vh;
 }
 
 .homeAbout {
