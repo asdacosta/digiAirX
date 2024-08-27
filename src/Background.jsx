@@ -201,11 +201,18 @@ const Background = ({ visibilityValue }) => {
 
   if (init) {
     return (
-      <Particles
-        style={{ visibility: visibilityValue }}
-        id="tsparticles"
-        options={options}
-      />
+      <section
+        style={{
+          visibility: visibilityValue,
+          height: "100vh",
+          width: "100vw",
+          position: "fixed",
+          top: "0",
+          left: "0",
+        }}
+      >
+        <Particles id="tsparticles" options={options} />
+      </section>
     );
   }
 
