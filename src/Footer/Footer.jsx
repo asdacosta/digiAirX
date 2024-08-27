@@ -38,7 +38,7 @@ function Footer() {
                 viewBox="0 0 448 512"
                 onClick={() => {
                   window.open(
-                    "https://www.linkedin.com/company/104608500/admin/dashboard/",
+                    "https://www.linkedin.com/company/104608500",
                     "_blank"
                   );
                 }}
