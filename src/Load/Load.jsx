@@ -23,11 +23,7 @@ function Load({ endOnComplete, displayValue }) {
   return (
     <section
       className={styles.load}
-      const
-      style={{
-        display: displayValue,
-        ...(theme === "dark" && { backgroundColor: "black" }),
-      }}
+      style={theme === "dark" ? { backgroundColor: "black" } : {}}
     >
       <Lot
         autoplay
