@@ -14,9 +14,9 @@ export const ThemeContext = createContext({
 });
 
 function App() {
-  const [stopLoad, setStopLoad] = useState(false);
+  const [stopLoad, setStopLoad] = useState({ stop: false, display: "flex" });
   const [theme, setTheme] = useState(null);
-  const endLoadOnComplete = () => setStopLoad(true);
+  const endLoadOnComplete = () => setStopLoad({ stop: true, display: "none" });
   const location = useLocation();
 
   const scrollIntoViewForHashChange = () => {
@@ -44,8 +44,11 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      {!stopLoad ? (
-        <Load endOnComplete={endLoadOnComplete} />
+      {!stopLoad.stop ? (
+        <Load
+          endOnComplete={endLoadOnComplete}
+          displayValue={stopLoad.display}
+        />
       ) : (
         <>
           <Nav />
