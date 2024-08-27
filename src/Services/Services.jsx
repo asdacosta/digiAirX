@@ -7,7 +7,7 @@ function Services() {
     <section id="servicesHead" className={styles.services}>
       <section className={styles.intro}>
         <p>
-          At DigiAirX, we deliver digital services tailored to your unique
+          At DigiairX, we deliver digital services tailored to your unique
           needs. Our focus on quality and client satisfaction guarantees
           solutions that make a significant impact on your business.
         </p>
@@ -146,7 +146,7 @@ function Services() {
             and network security.
           </p>
           <p>
-            At Digiairx, we build websites that serve various purposes, from
+            At DigiairX, we build websites that serve various purposes, from
             personal blogs and portfolio showcases to informational portals.
           </p>
           <p>
@@ -191,7 +191,7 @@ function Services() {
             server-side scripting, and database management.
           </p>
           <p>
-            At DigiAirX, we specialize in creating web apps that align with your
+            At DigiairX, we specialize in creating web apps that align with your
             business objectives. Our expertise covers both front-end development
             (designing visual and interactive interfaces), ensuring a seamless
             user experience, and back-end development (managing data and
@@ -265,7 +265,7 @@ function Services() {
             and better engagement with potential customers.
           </p>
           <p>
-            At DigiAirX, our SEO approach involves keyword research, on-page
+            At DigiairX, our SEO approach involves keyword research, on-page
             optimization, link building, and content creation to improve your
             website's ranking.
           </p>
@@ -298,7 +298,7 @@ function Services() {
             PPC advertising, and more.
           </p>
           <p>
-            At DigiAirX, we offer marketing solutions that span across multiple
+            At DigiairX, we offer marketing solutions that span across multiple
             channels, ensuring effective and results-driven campaigns. We
             leverage strategies to meet your business goals, including market
             research, creative campaign development, execution, and performance
@@ -334,7 +334,7 @@ function Services() {
             graphics, and advertising materials.
           </p>
           <p>
-            At Digiairx, graphic design is a fundamental part of our services,
+            At DigiairX, graphic design is a fundamental part of our services,
             covering various aspects such as brand identity design, marketing
             materials, digital graphics, and print design. Our goal is to create
             visually appealing designs that resonate with your audience and
@@ -373,7 +373,7 @@ function Services() {
             more.
           </p>
           <p>
-            At DigiAirX, our brand design solutions create a strong visual
+            At DigiairX, our brand design solutions create a strong visual
             identity that communicates your business values and stands out in
             the market. This includes visual identity and brand guidelines that
             align with your business objectives, ensuring unique designs.
