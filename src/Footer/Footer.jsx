@@ -136,7 +136,7 @@ function Footer() {
         </section>
       </section>
       <section className={styles.copyrightBox}>
-        <p>© 2024 Digiairx. All rights reserved.</p>
+        <p>© 2024 DigiairX. All rights reserved.</p>
       </section>
     </footer>
   );
