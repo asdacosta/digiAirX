@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { ThemeContext } from "./App";
 
-const Background = () => {
+const Background = ({ visibilityValue }) => {
   const [init, setInit] = useState(false);
   const [color, setColor] = useState({
     light: "#ffffff",
@@ -200,7 +200,13 @@ const Background = () => {
   );
 
   if (init) {
-    return <Particles id="tsparticles" options={options} />;
+    return (
+      <Particles
+        style={{ visibility: visibilityValue }}
+        id="tsparticles"
+        options={options}
+      />
+    );
   }
 
   return <></>;
