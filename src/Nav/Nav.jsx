@@ -7,7 +7,7 @@ import darkLogo from "../assets/logo-dark.jpg";
 import { ThemeContext } from "../App";
 import { Link, NavLink } from "react-router-dom";
 
-function Nav() {
+function Nav({ visibilityValue }) {
   const [lottie, setLottie] = useState(null);
   const [menuOpened, setMenuOpened] = useState(false);
   const [segment, setSegment] = useState([0, 30]);
@@ -40,7 +40,7 @@ function Nav() {
   };
 
   return (
-    <section className={styles.nav}>
+    <section className={styles.nav} style={{ visibility: visibilityValue }}>
       <section className={styles.logoBox}>
         <Link to="/">
           <img
