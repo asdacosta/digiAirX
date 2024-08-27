@@ -5,7 +5,7 @@ const allFeedbacks = {
     "Must be two or more characters",
   ],
   email: ["Enter a valid email"],
-  tel: ["Enter a valid phone number or leave blank"],
+  tel: ["Enter a valid number or skip"],
 };
 
 export { allFeedbacks };
