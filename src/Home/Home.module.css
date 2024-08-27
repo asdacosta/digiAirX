@@ -233,6 +233,10 @@ svg.tiktok {
   height: 80vh;
 }
 
+.servicesSlide {
+  height: 70vh;
+}
+
 .homeAbout {
   gap: 2rem;
 }
