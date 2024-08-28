@@ -64,14 +64,14 @@ function Home() {
               style={
                 theme === "light" ? { display: "block" } : { display: "none" }
               }
-              alt="Digiairx logo"
+              alt="DigiairX - Website Development, Build website, Web design, User experience and User interface, SEO, Marketing, Graphic Design, Brand Design, and all digital services. "
             />
             <img
               src={darkLogo}
               style={
                 theme === "dark" ? { display: "block" } : { display: "none" }
               }
-              alt="Digiairx logo"
+              alt="DigiairX - Website Development, Build website, Web design, User experience and User interface, SEO, Marketing, Graphic Design, Brand Design, and all digital services. "
             />
             DigiairX
           </h1>
