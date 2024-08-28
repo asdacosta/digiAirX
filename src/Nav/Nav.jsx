@@ -48,14 +48,14 @@ function Nav({ visibilityValue }) {
             style={
               theme === "light" ? { display: "block" } : { display: "none" }
             }
-            alt="DigiairX - Website Development, Web design, User experience and User interface, SEO, Marketing, Graphic Design, Brand Design, and all digital services. "
+            alt="DigiairX - Website Development, Build website, Web design, User experience and User interface, SEO, Marketing, Graphic Design, Brand Design, and all digital services. "
           />
           <img
             src={darkLogo}
             style={
               theme === "dark" ? { display: "block" } : { display: "none" }
             }
-            alt="DigiairX - Website Development, Web design, User experience and User interface, SEO, Marketing, Graphic Design, Brand Design, and all digital services. "
+            alt="DigiairX - Website Development, Build website, Web design, User experience and User interface, SEO, Marketing, Graphic Design, Brand Design, and all digital services. "
           />
         </Link>
       </section>
