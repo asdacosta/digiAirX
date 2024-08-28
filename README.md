@@ -135,6 +135,7 @@ Developers, users, and non-developers.
 - [ ] Move components to components/
 - [ ] Add newsletter subscription to Home and Contact sections
 - [ ] Add Content creation, Social media management(Including sale of accounts), Automation, Data analysis, AI services(Including ChatBots), Art Design, Video Production, Mobile apps, Game Development
+- [ ] Group services into main categories
 - [ ] change root from div to body in React
 
 </details>
