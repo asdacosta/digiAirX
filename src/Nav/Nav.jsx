@@ -48,14 +48,14 @@ function Nav({ visibilityValue }) {
             style={
               theme === "light" ? { display: "block" } : { display: "none" }
             }
-            alt="Digiairx logo"
+            alt="DigiairX - Website Development, Web design, User experience and User interface, SEO, Marketing, Graphic Design, and Brand Design "
           />
           <img
             src={darkLogo}
             style={
               theme === "dark" ? { display: "block" } : { display: "none" }
             }
-            alt="Digiairx logo"
+            alt="DigiairX - Website Development, Web design, User experience and User interface, SEO, Marketing, Graphic Design, and Brand Design "
           />
         </Link>
       </section>
