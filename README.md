@@ -133,6 +133,9 @@ Developers, users, and non-developers.
 - [ ] Improve performance
 - [ ] Use api to give country codes for numbers
 - [ ] Move components to components/
+- [ ] Add newsletter subscription to Home and Contact sections
+- [ ] Add Content creation, Social media management(Including sale of accounts), Data analysis, AI services(Including ChatBots), Art Design, Video Production, Mobile apps, Game Development
+- [ ] change root from div to body in React
 
 </details>
 
