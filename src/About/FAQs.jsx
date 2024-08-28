@@ -133,18 +133,24 @@ const faqs = [
   },
   {
     key: "faq18",
+    question: "Can you design custom icons and illustrations?",
+    answer:
+      "Yes, we can create custom icons, illustrations, and other graphic elements tailored to your brand and design needs.",
+  },
+  {
+    key: "faq19",
     question: "Will my website be optimized for local search?",
     answer:
       "Yes, we implement local SEO strategies to help your website rank higher in both local and global search results, enabling you to attract customers within your geographic area and beyond.",
   },
   {
-    key: "faq19",
+    key: "faq20",
     question: "Can you design for both print and digital media?",
     answer:
       "Yes! we design for both print and digital media, ensuring that your visual assets are optimized for their respective formats and deliver a consistent brand experience.",
   },
   {
-    key: "faq20",
+    key: "faq21",
     question: "Do you offer training for using your services?",
     answer:
       "Yes, we offer training sessions and documentation for complex services to help you understand and use them effectively.",
