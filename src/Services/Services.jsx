@@ -294,8 +294,7 @@ function Services() {
           <p>
             Digital marketing involves promoting your business through online
             channels to effectively reach and engage your target audience. It
-            includes social media marketing, email marketing, content marketing,
-            PPC advertising, and more.
+            includes social media marketing, paid advertising, and more.
           </p>
           <p>
             At DigiairX, we offer marketing solutions that span across multiple
