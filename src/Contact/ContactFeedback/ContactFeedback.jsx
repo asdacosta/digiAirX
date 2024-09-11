@@ -19,7 +19,7 @@ function ContactFeedback() {
           <Player
             autoplay
             src="https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/sent.json"
-            style={{ width: "15rem", height: "15rem" }}
+            style={{ width: "8rem", height: "8rem" }}
             onEvent={(event) => {
               if (event === "complete") {
                 handleAnimationComplete();
