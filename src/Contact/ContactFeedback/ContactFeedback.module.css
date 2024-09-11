@@ -5,6 +5,8 @@
   align-items: center;
   gap: 2rem;
   height: 100vh;
+  width: 100vw;
+  background-color: #03055e31;
   z-index: 2;
 }
 
@@ -43,7 +45,7 @@
   display: block;
   position: relative;
   content: "";
-  background-color: white;
+  background-color: #0077b6;
   height: 0.1rem;
   bottom: -0.3rem;
   left: 50%;
@@ -57,6 +59,6 @@
 }
 
 .message svg {
-  fill: white;
+  fill: #0077b6;
   width: 1rem;
 }
