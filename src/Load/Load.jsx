@@ -3,7 +3,7 @@ import styles from "./Load.module.css";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../App";
 
-function Load({ endOnComplete, displayValue }) {
+function Load({ endOnComplete }) {
   const [lottie, setLottie] = useState(null);
   const { theme, setTheme } = useContext(ThemeContext);
   const lottieRefCall = (lottie) => setLottie(lottie);
