@@ -8,6 +8,22 @@ function Load({ endOnComplete, displayValue }) {
   const { theme, setTheme } = useContext(ThemeContext);
   const lottieRefCall = (lottie) => setLottie(lottie);
 
+  const triggerCompleteOnError = async () => {
+    try {
+      const response = await fetch(
+        "https://raw.githubusercontent.com/asdacosta/digiAirX/main/src/assets/load.json"
+      );
+      if (!response.ok) {
+        throw new Error(`Failed to load animation: ${response.status}`);
+      }
+    } catch (error) {
+      endOnComplete();
+    }
+  };
+  useEffect(() => {
+    triggerCompleteOnError();
+  }, []);
+
   const endAndClearOnComplete = () => {
     if (!lottie) return;
     lottie.addEventListener("complete", endOnComplete);
