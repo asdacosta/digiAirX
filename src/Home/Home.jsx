@@ -243,8 +243,8 @@ function Home() {
               <p>
                 At DigiairX, we are devoted to helping businesses achieve
                 success in the digital world. Our experienced team of experts
-                delivers the best digital services meticulously tailored to meet
-                your specific needs.
+                delivers the best digital services, meticulously tailored to
+                meet your specific needs, all at low prices.
               </p>
               <p>
                 Our collaborative approach ensures we fully understand your
